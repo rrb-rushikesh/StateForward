@@ -59,6 +59,8 @@ I built this to explore the concept but don't have the skills to take it further
 - [ ] Electron packaging
 - [ ] TypeScript, Python, Go support
 
+See [ROADMAP.md](./ROADMAP.md) for the full milestone breakdown.
+
 ---
 
 ## Open Source Building Blocks

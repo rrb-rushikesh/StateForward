@@ -1,33 +1,31 @@
 # Contributing to StateForward
 
-This project is an early-stage idea prototype. The concept is solid but the implementation barely exists — that's exactly why contributions matter here. You're not polishing a finished product, you're helping build the foundation.
+This project is an open invitation. The concept is solid, the prototype exists to communicate it, but the real product hasn't been built yet. That's exactly the opportunity here.
 
 ## Where to Start
 
-Read `doc_dump/snap-design-doc.md` before anything else. It has the full vision and architecture thinking.
+1. Read `doc_dump/snap-design-doc.md` — the full architecture vision
+2. Read [ROADMAP.md](./ROADMAP.md) — the build order, milestone by milestone
+3. Pick something from Milestone 1 and open a PR
 
-## What's Most Needed
+## Good First Tasks
 
-- **Canvas engine** — node-based backend canvas (logic / API / DB nodes)
-- **Two-way sync** — keeping the visual canvas and code editor in sync
-- **Frontend builder** — drag-and-drop UI component system
-- **Code generation** — visual nodes → real JS/TS
-- **Electron packaging** — turn this into a desktop app
+- Bootstrap the Electron + React + Vite project structure
+- Reproduce the IDE shell layout from `index.html` in React components
+- Embed Monaco Editor in a React component
+- Embed React Flow with a basic draggable node
 
 ## How to Contribute
 
 1. Fork the repo
-2. Create a branch: `git checkout -b your-feature`
+2. `git checkout -b your-feature`
 3. Make your changes
-4. Open a pull request with a clear description
+4. Open a pull request — describe what you built and why
 
-## Project Structure
+For large changes, open an issue first so we can align.
 
-```
-index.html        — IDE shell (current UI prototype)
-styles.css        — styling
-app.js            — frontend logic
-doc_dump/         — design docs and architecture notes
-```
+## Stack
 
-Open an issue first for large changes so we can align before you invest time.
+Target: **Electron + React + Vite + React Flow + Monaco Editor**
+
+The existing `index.html` is a visual reference, not a codebase to build on.
