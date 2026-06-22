@@ -1,7 +1,10 @@
 ---
 name: Feature / contribution idea
 about: Propose something to build
+title: ''
 labels: enhancement, help wanted
+assignees: ''
+
 ---
 
 **What do you want to build or improve?**

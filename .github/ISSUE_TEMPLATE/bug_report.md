@@ -1,7 +1,10 @@
 ---
 name: Bug report
 about: Something broken in the prototype
-labels: bug
+title: ''
+labels: bug, enhancement, help wanted
+assignees: ''
+
 ---
 
 **What's broken:**
