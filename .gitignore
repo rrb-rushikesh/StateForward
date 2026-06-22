@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Node (for future use)
+node_modules/
+npm-debug.log*
+
+# Electron (for future use)
+dist/
+out/
