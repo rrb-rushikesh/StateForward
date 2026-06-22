@@ -64,6 +64,37 @@ Rather than starting from scratch, most of the hard problems here are already so
 
 ---
 
+## AI Integration (Planned)
+
+AI in StateForward should work like it does in [Onlook](https://github.com/onlook-dev/onlook) — context-aware, unobtrusive, and deeply integrated into the workflow rather than bolted on as a chat sidebar. The IDE already understands your architecture: the component tree, the node graph, the data flows. AI should leverage that context to make meaningful suggestions, not generic ones.
+
+**What this looks like in practice:**
+- Ask AI to wire a frontend component to a backend node — it does it visually and in code simultaneously
+- Generate a new API route node from a description — it appears on the canvas and in the codebase
+- Explain a node or component in plain language
+- Refactor across the visual and code layer at once
+
+**Model provider settings (planned):**  
+Users should be able to plug in their own API key from any provider. No vendor lock-in.
+
+| Provider | Free Tier | Notes |
+|---|---|---|
+| [OpenAI](https://platform.openai.com) | Paid | GPT-4o, o1 |
+| [Anthropic](https://www.anthropic.com) | Paid | Claude 3.5 Sonnet |
+| [Google AI Studio](https://aistudio.google.com) | ✅ Free | Gemini 2.0 Flash — generous free tier |
+| [Groq](https://console.groq.com) | ✅ Free | Llama 3.3 70B, fastest inference available |
+| [NVIDIA NIM](https://build.nvidia.com) | ✅ Free | Llama, Mistral, Qwen3 and more — 40 RPM free |
+| [Cerebras](https://cloud.cerebras.ai) | ✅ Free | Ultra-fast inference |
+| [DeepSeek](https://platform.deepseek.com) | ✅ Free tier | Strong coding model |
+| [Mistral AI](https://console.mistral.ai) | ✅ Free tier | Mistral 7B and above |
+| [OpenRouter](https://openrouter.ai) | ✅ Free | 20+ free models, single API key for all |
+| [Hugging Face](https://huggingface.co/inference-api) | ✅ Free | Open models, self-hostable |
+| [Ollama](https://ollama.com) | ✅ Local | Run any open model locally, no API key needed |
+
+> The settings panel should let users pick a provider, paste their API key, and optionally select a model. Ollama support means fully offline/local usage with no external calls.
+
+---
+
 ## Getting Started
 
 No build step — open `index.html` in a browser to see the UI prototype.
