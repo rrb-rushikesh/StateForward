@@ -79,12 +79,24 @@ I built this to explore the concept but don't have the skills to take it further
 
 ---
 
+## Development Direction
+
+The prototype (`index.html`) is a **visual reference only** — not a foundation to build on. The real app needs to be built from scratch with a proper stack.
+
+**Target stack:** Electron + React + React Flow + Monaco Editor
+
+A web version is intentionally not a separate track. Electron apps are React apps under the hood — once the core works as a desktop app, a web build is a straightforward next step, not a rewrite.
+
+**First milestone for contributors:** Bootstrap an Electron + React project that reproduces the prototype's UI shell. Everything else builds on top of that.
+
+---
+
 ## Getting Started
 
 ```bash
 git clone https://github.com/rrb-rushikesh/StateForward.git
 cd StateForward
-# Open index.html in your browser
+# Open index.html in your browser to see the UI reference
 ```
 
 ## Contributing
