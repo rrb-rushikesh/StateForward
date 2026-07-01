@@ -61,21 +61,12 @@ The long-term vision is to work entirely at the node level. Add a node, connect 
 
 ---
 
-## AI Integration
+## AI & Open Source Foundation
 
-AI is wired into the canvas like [Onlook](https://github.com/onlook-dev/onlook), rather than a generic sidebar. The IDE already knows your component tree, node graph, and data flows, so AI can act meaningfully: generate a node from a description, wire a component to a backend, and refactor across both layers at once.
+AI is integrated directly into the canvas to generate nodes, connect routes, and refactor code, built on top of key open-source building blocks:
 
-Bring your own API key, as there is no vendor lock-in:
-
-**Paid:** OpenAI · Anthropic  
-**Free:** [Google AI Studio](https://aistudio.google.com) · [Groq](https://console.groq.com) · [NVIDIA NIM](https://build.nvidia.com) · [Cerebras](https://cloud.cerebras.ai) · [DeepSeek](https://platform.deepseek.com) · [Mistral](https://console.mistral.ai) · [OpenRouter](https://openrouter.ai)  
-**Local:** [Ollama](https://ollama.com): fully offline, no external calls
-
----
-
-## Key Open Source Building Blocks
-
-[React Flow](https://github.com/xyflow/xyflow) (canvas) · [Monaco Editor](https://github.com/microsoft/monaco-editor) (code editor) · [GrapesJS](https://github.com/GrapesJS/grapesjs) or [Puck](https://github.com/puckeditor/puck) (frontend builder) · [Onlook](https://github.com/onlook-dev/onlook) (two-way sync reference) · [Sandpack](https://github.com/codesandbox/sandpack) (live preview) · [Appsmith](https://github.com/appsmithorg/appsmith) (UI-backend binding reference)
+*   **Canvas & Editor:** [React Flow](https://github.com/xyflow/xyflow) and [Monaco Editor](https://github.com/microsoft/monaco-editor)
+*   **Sync & Preview:** [Onlook](https://github.com/onlook-dev/onlook) and [Sandpack](https://github.com/codesandbox/sandpack)
 
 ---
 
