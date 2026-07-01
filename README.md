@@ -8,6 +8,22 @@ Built as an **Electron desktop app** — real filesystem access, real codebases,
 
 ---
 
+## Vision — Where This is Headed
+
+Programming has always moved toward higher levels of abstraction. Binary → assembly → high-level languages. Every step removed complexity and let developers focus more on solving problems than writing instructions.
+
+The next step is moving beyond writing code altogether — not replacing code, but replacing the need to manually produce it.
+
+Instead of writing thousands of lines, developers design systems. They connect architecture, define data flow, business logic, and interactions through visual C4-inspired node graphs. AI translates that architecture into production-ready code using proven libraries, frameworks, and patterns.
+
+**Code becomes the implementation, not the interface.**
+
+The node graph is the source of intent. AI handles the repetitive implementation while developers stay focused on system design, architecture, and product thinking. Not another low-code platform — a development environment where architecture *is* the programming language.
+
+*This is what StateForward is truly building toward.*
+
+---
+
 ## The Idea
 
 - **Visual Builder** — drag-and-drop frontend + node-based backend canvas. Every node is real code.
