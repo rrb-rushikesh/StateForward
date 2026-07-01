@@ -1,15 +1,5 @@
 # StateForward
 
-> Design your system visually. Get real, production-grade code.
-
-An open-source concept for a desktop IDE where your architecture *is* your codebase. Think IcePanel meets VS Code — a visual canvas with a live, two-way synced code editor alongside it.
-
-Built as an **Electron desktop app** — real filesystem access, real codebases, not a sandbox.
-
----
-
-## Vision
-
 Programming has always moved toward higher levels of abstraction.
 
 We started with binary. Then assembly. Then high-level languages. Every step removed complexity and let developers focus more on solving problems than writing instructions.
@@ -24,17 +14,15 @@ Code becomes the implementation, not the interface.
 
 The node graph is the source of intent. AI handles the repetitive implementation while developers stay focused on system design, architecture, and product thinking.
 
-This is the direction Snap is built toward—not another low-code platform, but a development environment where architecture becomes the programming language.
-
----
-
-## The Idea
+This is the direction Snap is built toward—not another low-code platform, but a development environment where architecture becomes the programming language:
 
 - **Visual Builder** — drag-and-drop frontend + node-based backend canvas. Every node is real code.
 - **Code Editor** — true two-way sync. Change the canvas → code updates. Change the code → canvas updates.
 - **Frontend ↔ Backend Binding** — wire UI components directly to backend nodes. No mental mapping.
 
 The output is plain, portable JavaScript. Remove StateForward and the codebase stays intact.
+
+Built as an **Electron desktop app** — real filesystem access, real codebases, not a sandbox.
 
 ---
 
