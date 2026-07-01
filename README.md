@@ -9,7 +9,7 @@
 
 **Architecture-first development environment where system design becomes executable code.**
 
-[Vision](#the-vision) · [How It Works](#how-it-works) · [Philosophy](#philosophy) · [Contributing](#contributing)
+[Vision](#the-vision) · [How It Works](#how-it-works) · [Philosophy](#philosophy) · [Current State](#current-state--roadmap)
 
 ---
 
@@ -17,35 +17,62 @@
 
 ## The Problem
 
+<table>
+<tr>
+<td width="50%">
+
 We already design systems before we build them.
 
-We draw C4 diagrams. We define services, APIs, databases, events, and how everything connects. We present these diagrams in design reviews, store them in wikis, and reference them during onboarding.
+We draw **C4 diagrams**. We define **services**, **APIs**, **databases**, **events**, and how everything connects. We present these in design reviews, store them in wikis, reference them during onboarding.
 
-**Then we throw them away.**
+</td>
+<td width="50%">
 
-Once the design phase ends, we open a code editor and manually recreate the same architecture through thousands of lines of implementation code. The diagram becomes outdated the moment development begins.
+### Then we throw them away.
 
-**This feels backwards.** Why manually translate architecture into code when the architecture already describes what we want?
+Once design ends, we open a code editor and **manually recreate** the same architecture through thousands of lines of implementation.
+
+The diagram becomes outdated the moment development begins.
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+### This feels backwards.
+
+**Why manually translate architecture into code when the architecture already describes what we want?**
+
+</div>
 
 <br/>
 
 ## The Vision
 
+<div align="center">
+
 ### The Next Level of Abstraction
 
 Programming has always moved one level higher.
 
-We started with **binary**. Then **assembly**. Then **high-level languages**. Every step removed a layer of manual work and let us focus more on solving problems than telling the computer exactly what to do.
+**Binary** → **Assembly** → **High-Level Languages** → **Architecture?**
+
+</div>
+
+We started with binary. Then assembly. Then high-level languages. Every step removed a layer of manual work and let us focus more on solving problems than telling the computer exactly what to do.
 
 **I believe the next step is moving beyond writing most of the code ourselves.**
 
 Not because code disappears—code is still what runs everything. But writing thousands of lines of implementation shouldn't be where developers spend most of their time.
 
-Today, we already design systems before we build them. We draw C4 diagrams, define services, APIs, databases, events, and how everything connects. But those diagrams are only documentation. Once the design is done, we throw it away and start writing code that recreates the same architecture.
-
-That feels backwards.
+---
 
 ### Architecture as Source of Truth
+
+<table>
+<tr>
+<td width="60%">
 
 StateForward explores a different approach: **the architecture model becomes the project itself.**
 
@@ -53,29 +80,47 @@ The development environment is built around a C4-inspired, multi-layer architect
 
 **The visual model isn't documentation. It's the project itself.**
 
+</td>
+<td width="40%">
+
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                                                             │
-│   Developer designs the system architecture                │
-│   AI generates production code from that design            │
-│   Code remains readable, editable, and portable            │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────┐
+│                          │
+│  Developer designs       │
+│  architecture            │
+│         ↓                │
+│  AI generates            │
+│  production code         │
+│         ↓                │
+│  Code remains readable,  │
+│  editable, portable      │
+│                          │
+└──────────────────────────┘
 ```
+
+</td>
+</tr>
+</table>
 
 AI doesn't decide the architecture. **That's still the developer's job.**
 
 The developer designs the system. AI turns that design into production code using existing frameworks, libraries, and proven patterns. The generated code stays readable, editable, and completely portable. If you want to work directly in code, you can. The visual model and the code are simply two representations of the same system.
 
-**This isn't no-code. This is architecture-as-code.**
+> **This isn't no-code. This is architecture-as-code.**
 
 You still control the system design. You still decide the architecture. You still write custom logic when needed. But you spend less time writing implementation and more time designing systems.
 
+---
+
 ### The Direction Forward
+
+<div align="center">
 
 I don't think the future is no-code.
 
 **I think the future is where developers spend less time writing implementation and more time designing systems.**
+
+</div>
 
 StateForward is an exploration of that future—where architecture diagrams aren't just documentation, but the primary interface for building software. Where the complexity of implementation is handled by AI trained on proven patterns, and developers focus on what matters: designing robust, scalable systems.
 
@@ -189,61 +234,66 @@ Built as an **Electron desktop app**, not a web sandbox.
 
 <br/>
 
-## Current State
+## Current State & Roadmap
 
-> **⚠️ This is a conceptual prototype — not a working product.**
+<table>
+<tr>
+<td width="50%" valign="top">
 
-What exists today:
-- ✅ Static HTML/CSS/JS mockup (`index.html`, `styles.css`, `app.js`)
-- ✅ Visual design showing what the IDE _could_ look like
-- ✅ Clear articulation of the vision and approach
+### ⚠️ This is a Prototype
 
-What **doesn't** exist yet:
-- ❌ No working canvas or node editor
-- ❌ No AI code generation engine
-- ❌ No two-way synchronization
-- ❌ No Electron app shell
+**What exists today:**
+- Static HTML/CSS/JS mockup showing the concept
+- Visual design of what the IDE could look like
+- Clear articulation of the vision
 
-**I built this prototype to communicate the vision, but I don't have the skills to build the real product alone.** This is an open invitation for developers, designers, and architects who find this idea compelling to collaborate and make it real.
+**What's not built yet:**
+- Working canvas or node editor
+- AI code generation engine
+- Two-way synchronization
+- Electron app shell
+
+</td>
+<td width="50%" valign="top">
+
+### 🤝 Looking for Collaborators
+
+This project needs:
+- **Frontend engineers** (React, Electron, visual interfaces)
+- **Backend engineers** (architecture patterns, code generation, AST)
+- **AI/ML engineers** (architecture → code translation)
+- **Designers** (UX/interaction patterns)
+- **Architects** (C4 model validation)
+
+**[Start Contributing →](./CONTRIBUTING.md)**
+
+</td>
+</tr>
+</table>
+
+I built this prototype to communicate the vision, but I don't have the skills to build the real product alone. This is an open invitation for developers, designers, and architects who find this idea compelling to collaborate and make it real.
+
+<details>
+<summary><b>View Visual Mockups</b></summary>
 
 <br/>
 
-## Visual Preview
+> **Note:** These are early mockups showing what the IDE _might_ look like. The final implementation will evolve based on technical requirements and user feedback.
 
-> **Note:** These are early mockups of what the IDE _might_ look like. The final implementation will likely evolve significantly.
-
-<details>
-<summary><b>Frontend Builder</b></summary>
-
+### Frontend Builder
 ![Frontend Builder](img/Screenshot%202026-06-11%20195637.png)
-
 _Webflow-style drag-and-drop interface for visual frontend construction_
 
-</details>
-
-<details>
-<summary><b>Backend Node Canvas</b></summary>
-
+### Backend Node Canvas
 ![Backend Node Canvas](img/nodes.png)
-
 _Node-based backend architecture canvas with data flow visualization_
 
-</details>
-
-<details>
-<summary><b>Code Editor</b></summary>
-
+### Code Editor
 ![Code Editor](img/codes.png)
-
 _Integrated Monaco editor with synchronized visual-to-code updates_
 
-</details>
-
-<details>
-<summary><b>Database Viewer</b></summary>
-
+### Database Viewer
 ![Database Viewer](img/Screenshot%202026-06-11%20195659.png)
-
 _Visual database schema management and query builder_
 
 </details>
@@ -275,29 +325,6 @@ Electron + React + Vite
 ├── Fabric.js or Lexical (frontend visual builder)
 └── LLM Integration (architecture → code generation)
 ```
-
-<br/>
-
-## Contributing
-
-**This project needs you.**
-
-The prototype exists. The vision is clear. But building the real product requires:
-
-- **Frontend engineers** experienced with React, Electron, and visual editing interfaces
-- **Backend engineers** who understand architecture patterns, code generation, and AST manipulation
-- **AI/ML engineers** to design the architecture → code translation pipeline
-- **Designers** to refine the UX and interaction patterns
-- **Architects** to validate the C4 model implementation and ensure generated code quality
-
-### How to Get Started
-
-1. Read this README to understand the vision
-2. Look at the mockups in `index.html` to see the target design
-3. Check [CONTRIBUTING.md](./CONTRIBUTING.md) for technical direction
-4. Open an issue to discuss your ideas or start a PR to begin building
-
-**For large contributions**, open an issue first so we can align on direction.
 
 <br/>
 
