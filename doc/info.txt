@@ -1,0 +1,71 @@
+"Snap"is a full-stack JavaScript development platform. It exposes two synchronized environments — a visual builder and a traditional code editor — where every change in one is instantly reflected in the other. The two are not separate tools. They are two interfaces over the same underlying codebase. 
+
+ 
+
+The Visual Builder (webflow , figma) 
+
+The visual builder is split into two tabs: Frontend and Backend. 
+
+The Frontend tab is a drag-and-drop page builder in the style of Webflow. Components are placed, configured, and arranged visually. Layout, styling, and structure are handled through direct manipulation — no context switching into code required. The output is real HTML, CSS, and JavaScript. 
+
+The Backend tab is a node-based canvas. Logic, API routes, database operations, and data flows are represented as connected nodes. Each node maps to real code — a function, a route handler, a query, a middleware. The canvas is not a diagram tool. It is a development environment. What you build there is what runs. 
+
+Frontend-to-Backend Connection 
+
+Frontend components and backend ( icepanel - visual reference and c4 models, c4 layering nodes setup) nodes connect through a shared tagging and binding system. A frontend element can be tagged and bound to a backend node — wiring a button to an API call, a data field to a query result, a form to a handler. The connection is explicit, inspectable, and reflected in code. This replaces the implicit mental mapping developers normally maintain between UI and server logic. 
+
+The Code Editor 
+
+The traditional code editor sits alongside the visual builder. It shows the actual JavaScript — frontend components, backend routes, utility functions, everything. Edits made in the visual layer appear here immediately. Edits made here reflect back in the visual layer immediately. Neither environment is the source of truth — they are synchronized representations of the same thing. 
+
+ 
+
+ 
+
+ 
+
+What It Is Not 
+
+State Forward does not introduce new abstractions, new syntax, or a new execution model. It wraps existing libraries, patterns, and tooling in a visual interface. The code it produces is standard, readable, and portable. Removing "Snap"from a project leaves the codebase intact. 
+
+  
+
+This is how workflow look like: 
+
+Initially, there will be a dashboard displaying all the listed projects. You will have options to create, edit, delete, and more. 
+
+  
+
+When creating a new project, you need to specify the path (similar to VS Code, as we are referencing the VS Code workflow frequently). Next, you will select the project stack; for now, we will support JavaScript and essential features. Python, TypeScript, and Go will be added soon. 
+
+  
+
+Selecting the stack involves a detailed multi-step process to choose all necessary parameters. 
+
+  
+
+After this, our IDE will launch, and we can start developing. Whenever we initiate a new project, we will first create a dummy home page. 
+
+  
+
+You are tasked with designing this, so ensure it is not just a dummy project. I want a serious IDE with visuals similar to VS Code and much more. Utilize multiple libraries, including many component libraries, SDK, open project components, and various icon libraries, to develop this IDE platform capable of creating full-stack websites reliably. 
+
+ 
+
+ 
+
+A detailed and professional overview is provided regarding the functionality of the tabs within the "Snap"development platform. Based on the given context and technical details, outline the connection between the Frontend and Backend tabs, highlighting the smooth integration between the visual builder and the code editor. The tone should be refined, succinct, and indicative of a premium development setting. 
+
+  
+
+Currently, I am gathering all information and focusing solely on the interface. This is a very preliminary conceptualization, and I am using VS Code as my foundational UI to build upon. 
+
+  
+
+every tab features a Custom Active bar; each has specific components tailored to the tab's purpose. tasks will have customization files with components designed for specific tabs. Let's define this and elaborate on my AI code to develop this UI/UX. I aim for a solid UI, not just a basic or generic web app interface. Therefore, I will select external libraries, UI components, and more to create an appealing application interface. 
+
+ 
+
+I am providing you with some reference images to inspire you with my rough drawing, so you can understand how tabs work and what they look like. 
+
+I have shared my idea, and now it's up to you to develop this IDE. Conduct thorough research to discover if there are more efficient and optimized ways to proceed, considering various approaches and much more. You have the freedom to make changes, add new features, or eliminate ineffective ones. Additionally, think deeply about what will make this IDE successful, including advanced features and more. I'm considering creating a cross-platform desktop IDE using Electron. If there is a good workflow, then think about it and implement it. 
