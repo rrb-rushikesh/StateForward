@@ -8,6 +8,26 @@ Built as an **Electron desktop app** — real filesystem access, real codebases,
 
 ---
 
+## Vision
+
+Programming has always moved toward higher levels of abstraction.
+
+We started with binary. Then assembly. Then high-level languages. Every step removed complexity and let developers focus more on solving problems than writing instructions.
+
+I believe the next step is moving beyond writing code altogether.
+
+The goal isn't to replace code—it is to replace the need to manually produce it.
+
+Instead of writing thousands of lines, developers design systems. They connect architecture, define data flow, business logic, and interactions through visual C4-inspired node graphs. AI translates that architecture into production-ready code using proven libraries, frameworks, and patterns.
+
+Code becomes the implementation, not the interface.
+
+The node graph is the source of intent. AI handles the repetitive implementation while developers stay focused on system design, architecture, and product thinking.
+
+This is the direction Snap is built toward—not another low-code platform, but a development environment where architecture becomes the programming language.
+
+---
+
 ## The Idea
 
 - **Visual Builder** — drag-and-drop frontend + node-based backend canvas. Every node is real code.
@@ -63,23 +83,19 @@ Bring your own API key — no vendor lock-in:
 
 ---
 
-## Current State
-
-**This is a UI prototype — an idea preview, not a working product.**
-
-A static mockup (`index.html` + `styles.css` + `app.js`) showing what the IDE could look like. No working canvas, no code generation, no sync engine. I built it to communicate the vision, but don't have the skills to take it further alone.
-
-**Start here:** `doc_dump/snap-design-doc.md` has the full architecture thinking.
-
----
-
 ## Key Open Source Building Blocks
 
 [React Flow](https://github.com/xyflow/xyflow) (canvas) · [Monaco Editor](https://github.com/microsoft/monaco-editor) (code editor) · [GrapesJS](https://github.com/GrapesJS/grapesjs) or [Puck](https://github.com/puckeditor/puck) (frontend builder) · [Onlook](https://github.com/onlook-dev/onlook) (two-way sync reference) · [Sandpack](https://github.com/codesandbox/sandpack) (live preview) · [Appsmith](https://github.com/appsmithorg/appsmith) (UI-backend binding reference)
 
 ---
 
-## Visualizations / Concept Mockups
+## Current State & Visualizations
+
+**This is a UI prototype — an idea preview, not a working product.**
+
+A static mockup (`index.html` + `styles.css` + `app.js`) showing what the IDE could look like. No working canvas, no code generation, no sync engine. I built it to communicate the vision, but don't have the skills to take it further alone.
+
+**Start here:** `doc_dump/snap-design-doc.md` has the full architecture thinking.
 
 > ⚠️ **These are NOT the final project.** The screenshots below are early, rough mockups — a dumb visualisation built to imagine and communicate what the actual product *might* look like. The real implementation may look completely different.
 
