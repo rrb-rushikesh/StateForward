@@ -73,42 +73,9 @@ A static mockup (`index.html` + `styles.css` + `app.js`) showing what the IDE co
 
 ---
 
-## What Needs Building
-
-- [ ] Two-way sync engine (canvas ↔ code editor)
-- [ ] C4-level node canvas with zoom/drill-down navigation
-- [ ] Animated data-flow connections between nodes
-- [ ] Frontend drag-and-drop builder
-- [ ] Code generation (nodes → JS/TS)
-- [ ] Electron packaging
-
-See [ROADMAP.md](./ROADMAP.md) for the full milestone breakdown.
-
----
-
 ## Key Open Source Building Blocks
 
 [React Flow](https://github.com/xyflow/xyflow) (canvas) · [Monaco Editor](https://github.com/microsoft/monaco-editor) (code editor) · [GrapesJS](https://github.com/GrapesJS/grapesjs) or [Puck](https://github.com/puckeditor/puck) (frontend builder) · [Onlook](https://github.com/onlook-dev/onlook) (two-way sync reference) · [Sandpack](https://github.com/codesandbox/sandpack) (live preview) · [Appsmith](https://github.com/appsmithorg/appsmith) (UI-backend binding reference)
-
----
-
-## Development Direction
-
-**Target stack:** Electron + React + React Flow + Monaco Editor
-
-The prototype is a visual spec, not a codebase to build on. Start fresh — use `index.html` only as a layout reference.
-
-Web version is not a separate track. Once the desktop app works, a web build is a straightforward next step.
-
----
-
-## Getting Started
-
-```bash
-git clone https://github.com/rrb-rushikesh/StateForward.git
-cd StateForward
-# Open index.html in your browser to see the UI reference
-```
 
 ---
 
