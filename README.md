@@ -53,20 +53,7 @@ Clicking any node **drills down** to the next level. The back button **zooms out
 
 This is the core visual experience. Everything else, including code generation, AI, and two-way sync, builds on top of this canvas.
 
----
 
-## Node-First Development
-
-The long-term vision is to work entirely at the node level. Add a node, connect it, configure it, and the system writes the code. Delete a node and the code is removed. With no boilerplate and no context switching, you operate at the architecture layer while the code layer takes care of itself.
-
----
-
-## AI & Open Source Foundation
-
-AI is integrated directly into the canvas to generate nodes, connect routes, and refactor code, built on top of key open-source building blocks:
-
-*   **Canvas & Editor:** [React Flow](https://github.com/xyflow/xyflow) and [Monaco Editor](https://github.com/microsoft/monaco-editor)
-*   **Sync & Preview:** [Onlook](https://github.com/onlook-dev/onlook) and [Sandpack](https://github.com/codesandbox/sandpack)
 
 ---
 
