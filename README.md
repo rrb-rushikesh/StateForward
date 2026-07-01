@@ -1,90 +1,143 @@
 # StateForward
 
-*Design the system. Let the code follow.*
+> Design your system visually. Get real, production-grade code.
+
+An open-source concept for a desktop IDE where your architecture *is* your codebase. Think IcePanel meets VS Code — a visual canvas with a live, two-way synced code editor alongside it.
+
+Built as an **Electron desktop app** — real filesystem access, real codebases, not a sandbox.
 
 ---
 
-Programming has always moved toward higher abstraction.
+## The Idea
 
-Binary → assembly → high-level languages. Each step let developers stop thinking about *how* and start thinking about *what*.
+- **Visual Builder** — drag-and-drop frontend + node-based backend canvas. Every node is real code.
+- **Code Editor** — true two-way sync. Change the canvas → code updates. Change the code → canvas updates.
+- **Frontend ↔ Backend Binding** — wire UI components directly to backend nodes. No mental mapping.
 
-The next step is to stop writing code altogether — not to replace it, but to stop producing it by hand. You design the system. AI fills in the implementation. **Code becomes the output, not the work.**
-
-StateForward is a desktop IDE built around this idea. Your architecture canvas *is* your codebase. Every node you place, every connection you draw — generates real, portable code. Edit the code, and the canvas reflects it back.
-
-No lock-in. No proprietary runtime. Remove StateForward and your project still runs.
-
-*This is not another low-code tool. It's a development environment where architecture becomes the programming language.*
+The output is plain, portable JavaScript. Remove StateForward and the codebase stays intact.
 
 ---
 
-## The Canvas
+## C4 Architecture Canvas
 
-Inspired by the [C4 model](https://c4model.com) — one canvas, four zoom levels:
+StateForward's canvas is heavily inspired by [IcePanel](https://icepanel.io) and the [C4 model](https://c4model.com) — a way of visualizing software architecture at multiple zoom levels. The key difference: in IcePanel, diagrams are documentation. In StateForward, they generate and stay in sync with real code.
 
-| Zoom in | You're looking at |
-|---|---|
-| **System** | Your whole product — services, databases, external APIs |
-| **Container** | Inside a service — apps, queues, caches |
-| **Component** | Route handlers, controllers, queries |
-| **Code** | The actual function — live in Monaco |
+**The canvas operates at 4 levels:**
 
-Click any node to drill down. Back to zoom out. You're always in the same canvas — just at a different depth.
+| Level | What you see | Maps to |
+|---|---|---|
+| System | Your entire product — services, databases, external APIs | Top-level architecture |
+| Container | Inside a service — the apps, queues, caches that make it up | Infrastructure / deployment units |
+| Component | Inside a container — route handlers, controllers, queries | Real code modules |
+| Code | Inside a component — the actual function or class | Live Monaco editor |
 
-Every node is a real operation. Wire an HTTP trigger to a validator, a DB insert, an email sender — and the route code writes itself in the panel beside it. AI lives inside the canvas too, not in a sidebar. It already knows your architecture, so it can act on it meaningfully.
+Clicking any node **drills down** to the next level. The back button **zooms out**. You're always navigating the same canvas — just at different granularities.
+
+**Canvas features (planned):**
+- Animated data-flow arrows showing how requests and data move between nodes
+- Color-coded node types: frontend components, API routes, DB queries, auth, external services
+- Grouped zones (e.g. "Backend cluster", "Frontend app") with collapsible boundaries
+- Node status indicators — live, draft, broken connection
+- Pan, zoom, minimap for large systems
+- Click any node at Component level → opens the corresponding file in Monaco
+
+This is the core visual experience. Everything else — code generation, AI, two-way sync — builds on top of this canvas.
 
 ---
 
-## Where it is now
+## Node-First Development
 
-**This is a UI prototype. Not a working product.**
-
-A static mockup (`index.html` + `app.js` + `styles.css`) built to make the idea visible and communicable — not to ship. No sync engine, no code generation, no real filesystem yet.
-
-The full architecture thinking is in [`doc_dump/snap-design-doc.md`](./doc_dump/snap-design-doc.md). The roadmap is in [ROADMAP.md](./ROADMAP.md).
+The long-term vision: you work entirely at the node level. Add a node, connect it, configure it — the system writes the code. Delete a node — the code is removed. No boilerplate, no context switching. You operate at the architecture layer; the code layer takes care of itself.
 
 ---
 
-## Concept snapshots
+## AI Integration
 
-> Early mockups — rough, imperfect, not final. Here to make the idea visible, not to demonstrate a product.
+AI wired into the canvas like [Onlook](https://github.com/onlook-dev/onlook) — not a generic sidebar. The IDE already knows your component tree, node graph, and data flows, so AI can act meaningfully: generate a node from a description, wire a component to a backend, refactor across both layers at once.
 
-<br>
+Bring your own API key — no vendor lock-in:
 
-**🎨 Frontend — Visual Builder**
-*Drag components onto a canvas. Get real HTML and CSS. The properties panel is live — change a value here, see it in code.*
+**Paid:** OpenAI · Anthropic  
+**Free:** [Google AI Studio](https://aistudio.google.com) · [Groq](https://console.groq.com) · [NVIDIA NIM](https://build.nvidia.com) · [Cerebras](https://cloud.cerebras.ai) · [DeepSeek](https://platform.deepseek.com) · [Mistral](https://console.mistral.ai) · [OpenRouter](https://openrouter.ai)  
+**Local:** [Ollama](https://ollama.com) — fully offline, no external calls
+
+---
+
+## Current State
+
+**This is a UI prototype — an idea preview, not a working product.**
+
+A static mockup (`index.html` + `styles.css` + `app.js`) showing what the IDE could look like. No working canvas, no code generation, no sync engine. I built it to communicate the vision, but don't have the skills to take it further alone.
+
+**Start here:** `doc_dump/snap-design-doc.md` has the full architecture thinking.
+
+---
+
+## What Needs Building
+
+- [ ] Two-way sync engine (canvas ↔ code editor)
+- [ ] C4-level node canvas with zoom/drill-down navigation
+- [ ] Animated data-flow connections between nodes
+- [ ] Frontend drag-and-drop builder
+- [ ] Code generation (nodes → JS/TS)
+- [ ] Electron packaging
+
+See [ROADMAP.md](./ROADMAP.md) for the full milestone breakdown.
+
+---
+
+## Key Open Source Building Blocks
+
+[React Flow](https://github.com/xyflow/xyflow) (canvas) · [Monaco Editor](https://github.com/microsoft/monaco-editor) (code editor) · [GrapesJS](https://github.com/GrapesJS/grapesjs) or [Puck](https://github.com/puckeditor/puck) (frontend builder) · [Onlook](https://github.com/onlook-dev/onlook) (two-way sync reference) · [Sandpack](https://github.com/codesandbox/sandpack) (live preview) · [Appsmith](https://github.com/appsmithorg/appsmith) (UI-backend binding reference)
+
+---
+
+## Development Direction
+
+**Target stack:** Electron + React + React Flow + Monaco Editor
+
+The prototype is a visual spec, not a codebase to build on. Start fresh — use `index.html` only as a layout reference.
+
+Web version is not a separate track. Once the desktop app works, a web build is a straightforward next step.
+
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/rrb-rushikesh/StateForward.git
+cd StateForward
+# Open index.html in your browser to see the UI reference
+```
+
+---
+
+## Visualizations / Concept Mockups
+
+> ⚠️ **These are NOT the final project.** The screenshots below are early, rough mockups — a dumb visualisation built to imagine and communicate what the actual product *might* look like. The real implementation may look completely different.
+
+### 🎨 Frontend Builder
 
 ![Frontend Builder](doc/img/Screenshot%202026-06-11%20195637.png)
 
-<br>
+### 🔀 Backend Node Canvas
 
-**🔀 Backend — Node Canvas**
-*Each node is a real backend operation. Wire them together and the Express route appears on the right, generated and in sync.*
+![Backend Node Canvas](doc/img/nodes.png)
 
-![Backend Canvas](doc/img/nodes.png)
-
-<br>
-
-**💻 Code — Always Synced**
-*A full Monaco editor, not a read-only view. Edit here, the canvas updates. Edit the canvas, the code updates. The file tree is your real project on disk.*
+### 💻 Code Editor
 
 ![Code Editor](doc/img/codes.png)
 
-<br>
-
-**🗄️ Database — Built In**
-*Browse tables, inspect rows, run queries — without leaving the IDE. A real SQLite file on disk, nothing managed or hidden.*
+### 🗄️ Database Viewer
 
 ![Database Viewer](doc/img/Screenshot%202026-06-11%20195659.png)
 
 ---
 
-## Built on
+## Contributing
 
-**Electron · React · [React Flow](https://github.com/xyflow/xyflow) · [Monaco Editor](https://github.com/microsoft/monaco-editor)**
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
-Also referencing [Onlook](https://github.com/onlook-dev/onlook) for two-way sync and [Sandpack](https://github.com/codesandbox/sandpack) for live preview.
+## License
 
----
-
-[Contributing](./CONTRIBUTING.md) · [MIT License](./LICENSE)
+[MIT](./LICENSE)
