@@ -4,9 +4,9 @@ This project is an open invitation. The concept is solid, the prototype exists t
 
 ## Where to Start
 
-1. Read `doc_dump/snap-design-doc.md` — the full architecture vision
-2. Read [ROADMAP.md](./ROADMAP.md) — the build order, milestone by milestone
-3. Pick something from Milestone 1 and open a PR
+1. Look at the prototype layouts in `index.html` to understand the target visual design.
+2. Read `README.md` to align on the core vision and C4 canvas idea.
+3. Open an issue or a PR to begin bootstrapping the core features.
 
 ## Good First Tasks
 

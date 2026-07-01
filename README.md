@@ -63,25 +63,23 @@ This is the core visual experience. Everything else, including code generation, 
 
 A static mockup (`index.html` + `styles.css` + `app.js`) showing what the IDE could look like. No working canvas, no code generation, no sync engine. I built it to communicate the vision, but don't have the skills to take it further alone.
 
-**Start here:** `doc_dump/snap-design-doc.md` has the full architecture thinking.
-
 > ⚠️ **These are NOT the final project.** The screenshots below are early, rough mockups: a dumb visualisation built to imagine and communicate what the actual product *might* look like. The real implementation may look completely different.
 
 ### 🎨 Frontend Builder
 
-![Frontend Builder](doc/img/Screenshot%202026-06-11%20195637.png)
+![Frontend Builder](img/Screenshot%202026-06-11%20195637.png)
 
 ### 🔀 Backend Node Canvas
 
-![Backend Node Canvas](doc/img/nodes.png)
+![Backend Node Canvas](img/nodes.png)
 
 ### 💻 Code Editor
 
-![Code Editor](doc/img/codes.png)
+![Code Editor](img/codes.png)
 
 ### 🗄️ Database Viewer
 
-![Database Viewer](doc/img/Screenshot%202026-06-11%20195659.png)
+![Database Viewer](img/Screenshot%202026-06-11%20195659.png)
 
 ---
 
