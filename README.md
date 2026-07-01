@@ -69,13 +69,7 @@ The long-term vision: you work entirely at the node level. Add a node, connect i
 
 ## AI Integration
 
-AI wired into the canvas like [Onlook](https://github.com/onlook-dev/onlook) — not a generic sidebar. The IDE already knows your component tree, node graph, and data flows, so AI can act meaningfully: generate a node from a description, wire a component to a backend, refactor across both layers at once.
-
-Bring your own API key — no vendor lock-in:
-
-**Paid:** OpenAI · Anthropic  
-**Free:** [Google AI Studio](https://aistudio.google.com) · [Groq](https://console.groq.com) · [NVIDIA NIM](https://build.nvidia.com) · [Cerebras](https://cloud.cerebras.ai) · [DeepSeek](https://platform.deepseek.com) · [Mistral](https://console.mistral.ai) · [OpenRouter](https://openrouter.ai)  
-**Local:** [Ollama](https://ollama.com) — fully offline, no external calls
+AI wired into the canvas — not a generic sidebar. The IDE already knows your component tree, node graph, and data flows, so AI can act meaningfully: generate a node from a description, wire a component to a backend, refactor across both layers at once. Bring your own API key — no vendor lock-in, works with any major provider or locally via Ollama.
 
 ---
 
@@ -89,42 +83,15 @@ A static mockup (`index.html` + `styles.css` + `app.js`) showing what the IDE co
 
 ---
 
-## What Needs Building
-
-- [ ] Two-way sync engine (canvas ↔ code editor)
-- [ ] C4-level node canvas with zoom/drill-down navigation
-- [ ] Animated data-flow connections between nodes
-- [ ] Frontend drag-and-drop builder
-- [ ] Code generation (nodes → JS/TS)
-- [ ] Electron packaging
-
-See [ROADMAP.md](./ROADMAP.md) for the full milestone breakdown.
-
 ---
 
-## Key Open Source Building Blocks
+## Tech Foundation
 
-[React Flow](https://github.com/xyflow/xyflow) (canvas) · [Monaco Editor](https://github.com/microsoft/monaco-editor) (code editor) · [GrapesJS](https://github.com/GrapesJS/grapesjs) or [Puck](https://github.com/puckeditor/puck) (frontend builder) · [Onlook](https://github.com/onlook-dev/onlook) (two-way sync reference) · [Sandpack](https://github.com/codesandbox/sandpack) (live preview) · [Appsmith](https://github.com/appsmithorg/appsmith) (UI-backend binding reference)
+**Target stack:** Electron · React · React Flow · Monaco Editor
 
----
-
-## Development Direction
-
-**Target stack:** Electron + React + React Flow + Monaco Editor
-
-The prototype is a visual spec, not a codebase to build on. Start fresh — use `index.html` only as a layout reference.
-
-Web version is not a separate track. Once the desktop app works, a web build is a straightforward next step.
+Built on proven open-source primitives: [React Flow](https://github.com/xyflow/xyflow) for the node canvas, [Monaco Editor](https://github.com/microsoft/monaco-editor) for the code editor, [Onlook](https://github.com/onlook-dev/onlook) as a two-way sync reference, and [Sandpack](https://github.com/codesandbox/sandpack) for live preview. The current prototype (`index.html`) is a visual spec — a layout reference, not a codebase to build on. See [ROADMAP.md](./ROADMAP.md) for the full milestone breakdown.
 
 ---
-
-## Getting Started
-
-```bash
-git clone https://github.com/rrb-rushikesh/StateForward.git
-cd StateForward
-# Open index.html in your browser to see the UI reference
-```
 
 ## Contributing
 
@@ -140,18 +107,26 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 > ⚠️ **These are NOT the final project.** The screenshots below are early, rough mockups — a dumb visualisation built to imagine and communicate what the actual product *might* look like. The real implementation may look completely different.
 
-### Frontend Builder
+### 🎨 Frontend Builder — Visual Design Canvas
 
-![Frontend Builder](doc/img/Screenshot%202026-06-11%20195637.png)
+A drag-and-drop interface where components, layout, and styling are built visually. Every element you place maps directly to real HTML and CSS — no generated soup, no lock-in. The properties panel on the right reflects the live component state, just like inspecting code.
 
-### Backend Node Canvas
+![Frontend Builder — Visual Design Canvas](doc/img/Screenshot%202026-06-11%20195637.png)
 
-![Backend Node Canvas](doc/img/nodes.png)
+### 🔀 Backend Canvas — Node-Based API Builder
 
-### Code Editor
+The backend is a visual flow graph, not a wall of Express boilerplate. Each node is a real operation — HTTP trigger, input validator, database insert, email dispatch. Wire them together and the route code is generated in the panel on the right, live. This is what "architecture as code" looks like in practice.
 
-![Code Editor](doc/img/codes.png)
+![Backend Canvas — Node-Based API Builder](doc/img/nodes.png)
 
-### Database Viewer
+### 💻 Code Editor — Always in Sync
 
-![Database Viewer](doc/img/Screenshot%202026-06-11%20195659.png)
+The Monaco-powered code tab is a full peer of the canvas, not a read-only view. Edit here and the visual canvas updates. Edit the canvas and the code updates. The file tree on the left is your actual project structure — no abstraction layer hiding what's really on disk.
+
+![Code Editor — Always in Sync](doc/img/codes.png)
+
+### 🗄️ Database — Visual SQLite Explorer
+
+A built-in database viewer so you never leave the IDE to inspect your data. Browse tables, check row counts, run queries, and manage schema — all in one place. The database is a real SQLite file on disk, not a managed cloud service.
+
+![Database — Visual SQLite Explorer](doc/img/Screenshot%202026-06-11%20195659.png)
