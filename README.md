@@ -1,10 +1,8 @@
 <div align="center">
 
-
 # StateForward
 
 **Architecture-first development environment where system design becomes executable code.**
-
 
 ---
 
@@ -18,7 +16,7 @@
 
 We already design systems before we build them.
 
-We draw **C4 diagrams**. We define **services**, **APIs**, **databases**, **events**, and how everything connects. We present these in design reviews, store them in wikis, reference them during onboarding.
+We draw **C4 diagrams**, define **services**, **APIs**, **databases**, **events**, and how everything connects. We present these in design reviews, store them in wikis, reference them during onboarding.
 
 </td>
 <td width="50%">
@@ -41,25 +39,15 @@ The diagram becomes outdated the moment development begins.
 
 </div>
 
-<br/>
-
 ## The Vision
 
 <div align="center">
 
-### The Next Level of Abstraction
-
-Programming has always moved one level higher.
-
 **Binary** → **Assembly** → **High-Level Languages** → **Architecture?**
 
+Every step in programming history removed a layer of manual work. We believe the next step is architecture itself.
+
 </div>
-
-We started with binary. Then assembly. Then high-level languages. Every step removed a layer of manual work and let us focus more on solving problems than telling the computer exactly what to do.
-
-**I believe the next step is moving beyond writing most of the code ourselves.**
-
-Not because code disappears - code is still what runs everything. But writing thousands of lines of implementation shouldn't be where developers spend most of their time.
 
 ---
 
@@ -69,13 +57,11 @@ Not because code disappears - code is still what runs everything. But writing th
 <tr>
 <td width="60%">
 
-StateForward explores a different approach: **the architecture model becomes the project itself.**
+**The architecture model becomes the project itself.**
 
-Every node, every connection, every service you design lives inside the application environment. There is no external diagramming step. No exporting. No copy-pasting specs into a code editor. You design visually, and the system translates your architecture into real, runnable code in real time - right there, inside the same environment.
+Every node, every connection, every service you design lives inside the application environment. No external diagramming. No exporting. No copy-pasting specs into a code editor. You design visually, the system translates it into real, runnable code in real time - inside the same environment.
 
-The development environment is built around a C4-inspired, multi-layer architecture model influenced by tools like [IcePanel](https://icepanel.io). But unlike documentation tools, StateForward doesn't produce diagrams. It produces code.
-
-**The visual model isn't documentation. It's the project itself.**
+Built around a C4-inspired, multi-layer model influenced by [IcePanel](https://icepanel.io). But unlike documentation tools, StateForward doesn't produce diagrams. **It produces code.**
 
 </td>
 <td width="40%">
@@ -99,23 +85,23 @@ The development environment is built around a C4-inspired, multi-layer architect
 </tr>
 </table>
 
-AI doesn't decide the architecture. **That's still the developer's job.**
-
-The developer designs the system. The application translates that design into production code using existing frameworks, libraries, and proven patterns. The generated code stays readable, editable, and completely portable. If you want to work directly in code, you can. The visual model and the code are simply two representations of the same system.
-
 > **This isn't no-code. This is architecture-as-code.**
+
+---
+
+### ⚡ A developer tool first. AI second.
 
 <table>
 <tr>
 <td>
 
-#### ⚡ A developer tool first. AI second.
+StateForward is **not built on AI**. AI is a part of it - not the foundation.
 
-StateForward is **not built on AI**. AI is a part of it, not the foundation.
+This is a fully capable development environment on its own. Visual architecture design, real-time code generation from structured templates, two-way sync, component binding - all of that works without AI. If AI disappears tomorrow, this tool still stands.
 
-Without AI, this is still a fully capable development environment - visual architecture design, real-time code generation from structured templates, two-way sync, component binding. All of that works on its own.
+AI accelerates the process. It fills in business logic, suggests patterns, catches design flaws. But it's a helper - a capable one - not the engine. This is not another AI wrapper. This is a developer tool that transforms how software gets built.
 
-AI accelerates the process. It fills in business logic, suggests patterns, catches design flaws. But the tool doesn't collapse without it. This is built for developers who want control over their systems - not a magic button that guesses what you meant.
+**Built for developers who want control over their systems, not a magic button that guesses what you meant.**
 
 </td>
 </tr>
@@ -123,27 +109,11 @@ AI accelerates the process. It fills in business logic, suggests patterns, catch
 
 ---
 
-### The Direction Forward
-
-<div align="center">
-
-I don't think the future is no-code.
-
-**I think the future is where developers spend less time writing implementation and more time designing systems.**
-
-</div>
-
-StateForward is an exploration of that future where architecture diagrams aren't just documentation, but the primary interface for building software. The tool handles the structural heavy lifting. AI handles the refinement. Developers focus on what matters: designing robust, scalable systems.
-
-<br/>
-
 ## How It Works
 
-We are heavily inspired by the C4 diagram workflow, but rigid diagrams fail in the real world. Real-world code is too chaotic, custom, and complex to be boxed into static boxes. Instead of locking developers into a visual cage, we are building a system with multi-layer scalability. This safely describes system architecture while retaining precise, granular control over individual components, simplifying them without stripping away their power.
+We are heavily inspired by C4 diagrams, but rigid diagrams fail in the real world. Code is too chaotic, custom, and complex to be boxed into static shapes.
 
-We aren't here to write thousands of lines of unnecessary code or invent new compiler tech from scratch. The building blocks - mature frameworks, battle-tested libraries, and robust components - already exist. The magic isn't in building new wheels; it's in the vision of how we connect them.
-
----
+We are building a system with multi-layer scalability that safely describes architecture while retaining precise control over individual components. The building blocks - mature frameworks, battle-tested libraries, robust components - already exist. The magic is in the vision of how we connect them.
 
 ## Core Features
 
@@ -153,7 +123,7 @@ We aren't here to write thousands of lines of unnecessary code or invent new com
 
 ### Visual Builder
 
-**Frontend:** Webflow-style drag-and-drop page builder  
+**Frontend:** Drag-and-drop page builder  
 **Backend:** Node-based canvas where every node is real code
 
 </td>
@@ -162,34 +132,18 @@ We aren't here to write thousands of lines of unnecessary code or invent new com
 ### Two-Way Sync
 
 **Change the canvas** → code updates  
-**Change the code** → canvas updates  
-
-Neither is the source of truth. Both are synchronized views.
+**Change the code** → canvas updates
 
 </td>
 <td width="33%" valign="top">
 
 ### Direct Bindings
 
-Wire UI components directly to backend nodes.  
-
-No implicit mental mapping between frontend and backend logic.
+Wire UI components directly to backend nodes. Tag, bind, and the connection is reflected in generated code.
 
 </td>
 </tr>
 </table>
-
-### Frontend ↔ Backend Connection System
-
-Frontend components and backend nodes connect through an **explicit tagging and binding system**.
-
-- Tag a button in the frontend builder
-- Bind it to an API route node in the backend canvas
-- The connection is inspectable, traceable, and reflected in generated code
-
-**This replaces the implicit mental model developers normally maintain.**
-
-<br/>
 
 ---
 
@@ -197,43 +151,27 @@ I've already built the core compiler engine prototype (StateForward) which valid
 
 I'm looking for a technical co-founder who cares about deep systems, clean architecture, and scalability - not someone looking for a "magic" AI prompt button. If this vision resonates and you have experience in full-stack development, backend systems, or compiler infrastructure, I'd love to hop on a quick call, demo the engine, and walk you through the codebase.
 
-<details>
-<summary><b>View Visual Mockups</b></summary>
+## Visual Mockups
 
-<br/>
+> Early mockups showing what the IDE could look like. The final implementation will evolve based on technical requirements.
 
-> **Note:** These are early mockups showing what the IDE _might_ look like. The final implementation will evolve based on technical requirements and user feedback.
+| Frontend Builder | Backend Node Canvas |
+|:---:|:---:|
+| ![Frontend Builder](img/Screenshot%202026-06-11%20195637.png) | ![Backend Node Canvas](img/nodes.png) |
+| _Drag-and-drop visual frontend construction_ | _Node-based architecture canvas with data flow_ |
 
-### Frontend Builder
-![Frontend Builder](img/Screenshot%202026-06-11%20195637.png)
-_Webflow-style drag-and-drop interface for visual frontend construction_
-
-### Backend Node Canvas
-![Backend Node Canvas](img/nodes.png)
-_Node-based backend architecture canvas with data flow visualization_
-
-### Code Editor
-![Code Editor](img/codes.png)
-_Integrated Monaco editor with synchronized visual-to-code updates_
-
-### Database Viewer
-![Database Viewer](img/Screenshot%202026-06-11%20195659.png)
-_Visual database schema management and query builder_
-
-</details>
-
-<br/>
+| Code Editor | Database Viewer |
+|:---:|:---:|
+| ![Code Editor](img/codes.png) | ![Database Viewer](img/Screenshot%202026-06-11%20195659.png) |
+| _Monaco editor with visual-to-code sync_ | _Visual database schema management_ |
 
 ## Learn More
 
 - **[C4 Model](https://c4model.com/)** - The architecture visualization framework StateForward is built on
-- **[IcePanel](https://icepanel.io)** - The tool that inspired the visual approach (but makes diagrams, not code)
-- **[Spec-Driven Development](https://medium.com/@enrico.papalini/the-evolution-of-spec-driven-development-c3b5efebb69a)** - Related philosophy about treating specs as source of truth
-
-<br/>
+- **[IcePanel](https://icepanel.io)** - The tool that inspired our visual approach (diagrams, not code)
+- **[Spec-Driven Development](https://medium.com/@enrico.papalini/the-evolution-of-spec-driven-development-c3b5efebb69a)** - Treating specs as source of truth
 
 ---
-
 
 <div align="center">
 
