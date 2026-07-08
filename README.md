@@ -8,52 +8,23 @@
 
 </div>
 
-## The Problem
+## Why StateForward
 
-<table>
-<tr>
-<td width="50%">
+You already design systems before you build them. C4 diagrams, service maps, API contracts, database schemas - you define all of it before writing a single line of code. Then you close the whiteboard, open VS Code, and manually recreate the same architecture across dozens of files. The diagram goes stale. By week two, nobody looks at it.
 
-Every developer has lived this cycle.
+**What if the architecture you designed was the code?**
 
-You spend days designing the system. Drawing **C4 diagrams**, mapping out **services**, **APIs**, **databases**, **queues**, defining how every piece connects. You present it in design reviews. Everyone aligns.
+Every AI coding tool today - Cursor, Copilot, Devin - works the same way: *prompt, generate, hallucinate, fix, repeat.* They all rely on natural language, and language is ambiguous. "Build a login system" means a hundred different things.
 
-Then you close the whiteboard and open VS Code.
-
-</td>
-<td width="50%">
-
-### Then you rewrite everything from scratch.
-
-The architecture you just designed? You now manually recreate it, line by line, across dozens of files. The diagram becomes stale within hours. By week two, nobody even looks at it anymore.
-
-Months of architecture work reduced to a forgotten PNG in Confluence.
-
-</td>
-</tr>
-</table>
+But when you draw an Auth Service connected to a Postgres store with a `POST /auth/login` route - there is **zero ambiguity**.
 
 <div align="center">
-
-### Every team does this. Nobody questions it.
-
-**Why are we manually translating architecture into code when the architecture already describes what we want?**
-
-</div>
-
-## The Vision
-
-<div align="center">
-
-Cursor, Copilot, Devin - every AI coding tool today works the same way.
-
-*Prompt. Generate. Hallucinate. Fix. Repeat.*
-
-They all rely on natural language, and natural language is ambiguous. "Build a login system" means a hundred different things. But when you draw an Auth Service connected to a Postgres store with a `POST /auth/login` route - there is **zero ambiguity**.
 
 **Binary** → **Assembly** → **High-Level Languages** → **Architecture?**
 
 Every step in programming history removed a layer of manual work. We believe the next step is architecture itself.
+
+Natural language handles the *why*. Architecture handles the *what*. The engine handles the *how*.
 
 </div>
 
@@ -137,12 +108,9 @@ We are building a system with multi-layer scalability that safely describes arch
 </td>
 <td width="33%" valign="top">
 
-### 🔄 Two-Way Sync
+### 🔄 Live Architecture Mirror
 
-**Change the canvas** → code updates  
-**Change the code** → canvas updates
-
-Visual model and codebase are two views of the same system. Edit either one, the other follows.
+Design on the canvas, the code writes itself. Edit the code, the canvas reshapes. Both are live views of the same system - always in sync, never out of date.
 
 </td>
 <td width="33%" valign="top">
@@ -172,9 +140,9 @@ Output is plain, portable code. Standard frameworks, standard patterns. Remove S
 </td>
 <td width="33%" valign="top">
 
-### 🖥️ Desktop-Native
+### 🖥️ Local-First, Fully Offline
 
-Built as an Electron app. Real filesystem access, real version control, works offline. Not a browser sandbox.
+Built as an Electron desktop app with real filesystem access and native version control. Your code stays on your machine. No cloud dependency, no browser sandbox.
 
 </td>
 </tr>
