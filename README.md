@@ -180,7 +180,7 @@ If this resonates, I'd love to hop on a quick call, run a live demo of the engin
 
 <div align="center">
 
-**Built with the belief that the future of coding is designing systems, not writing implementation.**
+**The future of software engineering isn't writing more code. It's designing better systems.**
 
 📬 **Interested? Let's talk.** - [rushikeshbombade07@gmail.com](mailto:rushikeshbombade07@gmail.com)
 
