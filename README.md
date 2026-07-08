@@ -14,18 +14,20 @@
 <tr>
 <td width="50%">
 
-We already design systems before we build them.
+Every developer has lived this cycle.
 
-We draw **C4 diagrams**, define **services**, **APIs**, **databases**, **events**, and how everything connects. We present these in design reviews, store them in wikis, reference them during onboarding.
+You spend days designing the system. Drawing **C4 diagrams**, mapping out **services**, **APIs**, **databases**, **queues**, defining how every piece connects. You present it in design reviews. Everyone aligns.
+
+Then you close the whiteboard and open VS Code.
 
 </td>
 <td width="50%">
 
-### Then we throw them away.
+### Then you rewrite everything from scratch.
 
-Once design ends, we open a code editor and **manually recreate** the same architecture through thousands of lines of implementation.
+The architecture you just designed? You now manually recreate it, line by line, across dozens of files. The diagram becomes stale within hours. By week two, nobody even looks at it anymore.
 
-The diagram becomes outdated the moment development begins.
+Months of architecture work reduced to a forgotten PNG in Confluence.
 
 </td>
 </tr>
@@ -33,15 +35,21 @@ The diagram becomes outdated the moment development begins.
 
 <div align="center">
 
-### This feels backwards.
+### Every team does this. Nobody questions it.
 
-**Why manually translate architecture into code when the architecture already describes what we want?**
+**Why are we manually translating architecture into code when the architecture already describes what we want?**
 
 </div>
 
 ## The Vision
 
 <div align="center">
+
+Cursor, Copilot, Devin - every AI coding tool today works the same way.
+
+*Prompt. Generate. Hallucinate. Fix. Repeat.*
+
+They all rely on natural language, and natural language is ambiguous. "Build a login system" means a hundred different things. But when you draw an Auth Service connected to a Postgres store with a `POST /auth/login` route - there is **zero ambiguity**.
 
 **Binary** → **Assembly** → **High-Level Languages** → **Architecture?**
 
@@ -121,35 +129,64 @@ We are building a system with multi-layer scalability that safely describes arch
 <tr>
 <td width="33%" valign="top">
 
-### Visual Builder
+### 🎨 Visual Builder
 
-**Frontend:** Drag-and-drop page builder  
-**Backend:** Node-based canvas where every node is real code
+**Frontend:** Webflow-style drag-and-drop page builder with component tree and inline editing  
+**Backend:** Node-based C4 canvas where systems, containers, and components are visual nodes that map directly to real code
 
 </td>
 <td width="33%" valign="top">
 
-### Two-Way Sync
+### 🔄 Two-Way Sync
 
 **Change the canvas** → code updates  
 **Change the code** → canvas updates
 
+Visual model and codebase are two views of the same system. Edit either one, the other follows.
+
 </td>
 <td width="33%" valign="top">
 
-### Direct Bindings
+### 🔗 Direct Bindings
 
-Wire UI components directly to backend nodes. Tag, bind, and the connection is reflected in generated code.
+Wire any frontend component to any backend endpoint. Tag a button, bind it to an API route - the contract is explicit, inspectable, and auto-generated in code.
+
+No more guessing which frontend calls which backend.
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+### ⚙️ Real-Time Code Generation
+
+As you place and connect nodes, the system generates services, schemas, routes, and middleware in real time. Not after you click "generate" - as you design.
+
+</td>
+<td width="33%" valign="top">
+
+### 📦 No Lock-In
+
+Output is plain, portable code. Standard frameworks, standard patterns. Remove StateForward from the project and your codebase stays completely intact.
+
+</td>
+<td width="33%" valign="top">
+
+### 🖥️ Desktop-Native
+
+Built as an Electron app. Real filesystem access, real version control, works offline. Not a browser sandbox.
 
 </td>
 </tr>
 </table>
 
----
+## Looking for a Technical Co-Founder
 
 I've already built the core compiler engine prototype (StateForward) which validates this pipeline. The underlying implementation is proprietary, and the full codebase is private.
 
-I'm looking for a technical co-founder who cares about deep systems, clean architecture, and scalability - not someone looking for a "magic" AI prompt button. If this vision resonates and you have experience in full-stack development, backend systems, or compiler infrastructure, I'd love to hop on a quick call, demo the engine, and walk you through the codebase.
+I'm looking for someone who has deep experience in **full-stack development**, **backend systems**, or **compiler infrastructure** - and who genuinely cares about clean architecture and scalability. Not someone chasing AI hype.
+
+If this resonates, I'd love to hop on a quick call, run a live demo of the engine, and walk you through the codebase. Serious inquiries only.
 
 ## Visual Mockups
 
