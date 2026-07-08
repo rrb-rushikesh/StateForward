@@ -5,6 +5,7 @@
 **Architecture-first development environment where system design becomes executable code.**
 
 Not no-code. Not an AI wrapper. A developer tool.
+
 ---
 
 </div>
@@ -77,11 +78,11 @@ Built around a C4-inspired, multi-layer model influenced by [IcePanel](https://i
 
 StateForward is **not built on AI**. AI is a part of it - not the foundation.
 
-This is a fully capable development environment on its own. Visual architecture design, real-time code generation from structured templates, two-way sync, component binding - all of that works without AI. If AI disappears tomorrow, this tool still stands.
+Without AI, this is still a fully capable development environment. The visual architecture designer, real-time code translation from templates, and component bindings are handled by our core compiler engine. If all AI APIs go down tomorrow, the application remains completely functional. It does not get destroyed.
 
-AI accelerates the process. It fills in business logic, suggests patterns, catches design flaws. But it's a helper - a capable one - not the engine. This is not another AI wrapper. This is a developer tool that transforms how software gets built.
+AI is a helper - a capable accelerator that automates boilerplate and suggests patterns. But the engine is separate. This is a developer tool designed to transform traditional workflows, not a magic button wrapper.
 
-**Built for developers who want control over their systems, not a magic button that guesses what you meant.**
+**Built for developers who want control over their systems, not a black-box that guesses what you meant.**
 
 </td>
 </tr>
@@ -89,27 +90,23 @@ AI accelerates the process. It fills in business logic, suggests patterns, catch
 
 ---
 
-## How It Works
+## How It Works: The Compiler Pipeline
 
-We are heavily inspired by C4 diagrams, but rigid diagrams fail in the real world. Code is too chaotic, custom, and complex to be boxed into static shapes.
+StateForward operates as a structured compiler, translating visual C4 models into production-ready repositories. The pipeline consists of three distinct stages:
 
-We are building a system with multi-layer scalability that safely describes architecture while retaining precise control over individual components. The building blocks - mature frameworks, battle-tested libraries, robust components - already exist. The magic is in the vision of how we connect them.
-
-This is a developer tool at its core. AI enhances it - it doesn't define it.
+1. **Architecture Interpreter:** Reads the visual C4 graph and validates structural consistency (e.g., matching API routes, schema shapes, and service connections).
+2. **Template Resolver:** Maps the architectural nodes to standard, battle-tested code templates.
+3. **Constrained AI Assistant (Optional):** Sits on top of the compilation process to help refine custom business logic. Because it operates within the strict boundaries of the verified C4 schema, hallucinations are eliminated. If the AI is turned off, the engine still outputs the complete boilerplate and architecture structure.
 
 ## Looking for a Technical Co-Founder
 
-I've already built the core compiler engine prototype (StateForward) which validates this pipeline. The underlying implementation is proprietary, and the full codebase is private.
+There's a lot more to this than what is written here - I'd rather walk you through it in person than try to fit it all into a README.
 
-There's a lot more to this than what's written here - the deeper mechanics, the engine internals, the full roadmap. I'd rather walk you through it in person than try to fit it all into a README.
+I'm looking for a partner with deep experience in **full-stack development**, **backend systems**, or **compiler infrastructure** who wants to build a platform that actually changes how software is built. If you are serious, understand compilers, and are ready to bet on a crazy idea - let's connect.
 
-I'm looking for someone who has deep experience in **full-stack development**, **backend systems**, or **compiler infrastructure** - and who genuinely cares about clean architecture and scalability. Not someone chasing AI hype.
+📬 **Interested? Let's talk:** [rushikeshbombade07@gmail.com](mailto:rushikeshbombade07@gmail.com)
 
-If you're serious about this and willing to bet on a crazy idea that could change how software gets built - let's talk.
-
-## Visual Mockups
-
-> Early mockups showing what the IDE could look like. The final implementation will evolve based on technical requirements.
+## IDE Interface Layout
 
 | Frontend Builder | Backend Node Canvas |
 |:---:|:---:|
@@ -132,7 +129,5 @@ If you're serious about this and willing to bet on a crazy idea that could chang
 <div align="center">
 
 **The future of software engineering isn't writing more code. It's designing better systems.**
-
-📬 **Interested? Let's talk.** - [rushikeshbombade07@gmail.com](mailto:rushikeshbombade07@gmail.com)
 
 </div>
