@@ -110,12 +110,12 @@ I'm looking for a partner with deep experience in **full-stack development**, **
 
 | Frontend Builder | Backend Node Canvas |
 |:---:|:---:|
-| ![Frontend Builder](img/Screenshot%202026-06-11%20195637.png) | ![Backend Node Canvas](img/nodes.png) |
+| ![Frontend Builder](img/Front%20end..png) | ![Backend Node Canvas](img/Back%20end..png) |
 | _Drag-and-drop visual frontend construction_ | _Node-based architecture canvas with data flow_ |
 
 | Code Editor | Database Viewer |
 |:---:|:---:|
-| ![Code Editor](img/codes.png) | ![Database Viewer](img/Screenshot%202026-06-11%20195659.png) |
+| ![Code Editor](img/code.png) | ![Database Viewer](img/Database.png) |
 | _Monaco editor with visual-to-code sync_ | _Visual database schema management_ |
 
 ## Learn More
