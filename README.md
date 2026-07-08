@@ -71,7 +71,7 @@ Not because code disappears code is still what runs everything. But writing thou
 
 StateForward explores a different approach: **the architecture model becomes the project itself.**
 
-The development environment is built around a C4-inspired, multi-layer architecture model influenced by tools like [IcePanel](https://icepanel.io). Systems, containers, components, APIs, databases, queues, and their relationships aren't just visual diagrams—they directly describe how the application works.
+The development environment is built around a C4-inspired, multi-layer architecture model influenced by tools like [IcePanel](https://icepanel.io). Systems, containers, components, APIs, databases, queues, and their relationships aren't just visual diagrams - they directly describe how the application works.
 
 **The visual model isn't documentation. It's the project itself.**
 
@@ -125,7 +125,7 @@ StateForward is an exploration of that future where architecture diagrams aren't
 
 We are heavily inspired by the C4 diagram workflow, but rigid diagrams fail in the real world. Real-world code is too chaotic, custom, and complex to be boxed into static boxes. Instead of locking developers into a visual cage, we are building a system with multi-layer scalability. This safely describes system architecture while retaining precise, granular control over individual components, simplifying them without stripping away their power.
 
-We aren't here to write thousands of lines of unnecessary code or invent new compiler tech from scratch. The building blocks—mature frameworks, battle-tested libraries, and robust components—already exist. The magic isn't in building new wheels; it's in the vision of how we connect them.
+We aren't here to write thousands of lines of unnecessary code or invent new compiler tech from scratch. The building blocks - mature frameworks, battle-tested libraries, and robust components - already exist. The magic isn't in building new wheels; it's in the vision of how we connect them.
 
 ---
 
@@ -177,7 +177,9 @@ Frontend components and backend nodes connect through an **explicit tagging and 
 
 ---
 
-I built this prototype to communicate the vision, but I don't have the skills to build the real product alone. This is an open invitation for developers, designers, and architects who find this idea compelling to collaborate and make it real.
+I've already built the core compiler engine prototype (StateForward) which validates this pipeline. The underlying implementation is proprietary, and the full codebase is private.
+
+I'm looking for a technical co-founder who cares about deep systems, clean architecture, and scalability - not someone looking for a "magic" AI prompt button. If this vision resonates and you have experience in full-stack development, backend systems, or compiler infrastructure, I'd love to hop on a quick call, demo the engine, and walk you through the codebase.
 
 <details>
 <summary><b>View Visual Mockups</b></summary>
@@ -208,10 +210,9 @@ _Visual database schema management and query builder_
 
 ## Learn More
 
-- **[C4 Model](https://c4model.com/)** — The architecture visualization framework StateForward is built on
-- **[IcePanel](https://icepanel.io)** — The tool that inspired the visual approach (but makes diagrams, not code)
-- **[Spec-Driven Development](https://medium.com/@enrico.papalini/the-evolution-of-spec-driven-development-c3b5efebb69a)** — Related philosophy about treating specs as source of truth
-- **[The Future of Coding](https://github.com/rrb-rushikesh/StateForward/blob/main/docs/vision.md)** _(coming soon)_ — Deeper exploration of architecture-first development
+- **[C4 Model](https://c4model.com/)** - The architecture visualization framework StateForward is built on
+- **[IcePanel](https://icepanel.io)** - The tool that inspired the visual approach (but makes diagrams, not code)
+- **[Spec-Driven Development](https://medium.com/@enrico.papalini/the-evolution-of-spec-driven-development-c3b5efebb69a)** - Related philosophy about treating specs as source of truth
 
 <br/>
 
@@ -222,6 +223,6 @@ _Visual database schema management and query builder_
 
 **Built with the belief that the future of coding is designing systems, not writing implementation.**
 
-
+📬 **Interested? Let's talk.** - [rushikeshbombade07@gmail.com](mailto:rushikeshbombade07@gmail.com)
 
 </div>
