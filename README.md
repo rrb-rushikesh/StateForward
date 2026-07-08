@@ -123,23 +123,9 @@ StateForward is an exploration of that future where architecture diagrams aren't
 
 ## How It Works
 
-StateForward is built around a **multi-layer C4 architecture canvas** inspired by [IcePanel](https://icepanel.io). But unlike IcePanel, which creates diagrams for documentation, StateForward generates and stays synchronized with actual, runnable code.
+We are heavily inspired by the C4 diagram workflow, but rigid diagrams fail in the real world. Real-world code is too chaotic, custom, and complex to be boxed into static boxes. Instead of locking developers into a visual cage, we are building a system with multi-layer scalability. This safely describes system architecture while retaining precise, granular control over individual components, simplifying them without stripping away their power.
 
-### The Four-Layer Canvas
-
-| Layer | What You Design | Maps To |
-|-------|----------------|---------|
-| **System** | Your entire product: services, databases, external APIs | Top-level architecture |
-| **Container** | Inside a service: apps, queues, caches, infrastructure | Deployment units |
-| **Component** | Inside a container: route handlers, controllers, business logic | Real code modules |
-| **Code** | Inside a component: the actual functions and classes | Live Monaco editor |
-
-**Navigation:**
-- **Click** any node → drill down to the next level
-- **Back button** → zoom out to the parent level
-- You're always navigating the same canvas, just at different granularities
-
-</br>
+We aren't here to write thousands of lines of unnecessary code or invent new compiler tech from scratch. The building blocks—mature frameworks, battle-tested libraries, and robust components—already exist. The magic isn't in building new wheels; it's in the vision of how we connect them.
 
 ---
 
@@ -190,9 +176,6 @@ Frontend components and backend nodes connect through an **explicit tagging and 
 <br/>
 
 ---
->
-</tr>
-</table>
 
 I built this prototype to communicate the vision, but I don't have the skills to build the real product alone. This is an open invitation for developers, designers, and architects who find this idea compelling to collaborate and make it real.
 
