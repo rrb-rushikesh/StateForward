@@ -97,60 +97,6 @@ We are building a system with multi-layer scalability that safely describes arch
 
 This is a developer tool at its core. AI enhances it - it doesn't define it.
 
-## Core Features
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 🎨 Visual Builder
-
-**Frontend:** Webflow-style drag-and-drop page builder with component tree and inline editing  
-**Backend:** Node-based C4 canvas where systems, containers, and components are visual nodes that map directly to real code
-
-</td>
-<td width="33%" valign="top">
-
-### 🔄 Live Architecture Mirror
-
-Design on the canvas, the code writes itself. Edit the code, the canvas reshapes. Both are live views of the same system - always in sync, never out of date.
-
-</td>
-<td width="33%" valign="top">
-
-### 🔗 Direct Bindings
-
-Wire any frontend component to any backend endpoint. Tag a button, bind it to an API route - the contract is explicit, inspectable, and auto-generated in code.
-
-No more guessing which frontend calls which backend.
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top">
-
-### ⚙️ Real-Time Code Generation
-
-As you place and connect nodes, the system generates services, schemas, routes, and middleware in real time. Not after you click "generate" - as you design.
-
-</td>
-<td width="33%" valign="top">
-
-### 📦 No Lock-In
-
-Output is plain, portable code. Standard frameworks, standard patterns. Remove StateForward from the project and your codebase stays completely intact.
-
-</td>
-<td width="33%" valign="top">
-
-### 🖥️ Local-First, Fully Offline
-
-Built as an Electron desktop app with real filesystem access and native version control. Your code stays on your machine. No cloud dependency, no browser sandbox.
-
-</td>
-</tr>
-</table>
-
 ## Looking for a Technical Co-Founder
 
 I've already built the core compiler engine prototype (StateForward) which validates this pipeline. The underlying implementation is proprietary, and the full codebase is private.
