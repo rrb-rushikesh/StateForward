@@ -4,6 +4,7 @@
 
 **Architecture-first development environment where system design becomes executable code.**
 
+Not no-code. Not an AI wrapper. A developer tool.
 ---
 
 </div>
@@ -64,7 +65,7 @@ Built around a C4-inspired, multi-layer model influenced by [IcePanel](https://i
 </tr>
 </table>
 
-> **This isn't no-code. This is architecture-as-code.**
+> **This isn't no-code. This isn't another AI wrapper. This is architecture-as-code.**
 
 ---
 
@@ -93,6 +94,8 @@ AI accelerates the process. It fills in business logic, suggests patterns, catch
 We are heavily inspired by C4 diagrams, but rigid diagrams fail in the real world. Code is too chaotic, custom, and complex to be boxed into static shapes.
 
 We are building a system with multi-layer scalability that safely describes architecture while retaining precise control over individual components. The building blocks - mature frameworks, battle-tested libraries, robust components - already exist. The magic is in the vision of how we connect them.
+
+This is a developer tool at its core. AI enhances it - it doesn't define it.
 
 ## Core Features
 
@@ -152,9 +155,11 @@ Built as an Electron desktop app with real filesystem access and native version 
 
 I've already built the core compiler engine prototype (StateForward) which validates this pipeline. The underlying implementation is proprietary, and the full codebase is private.
 
+There's a lot more to this than what's written here - the deeper mechanics, the engine internals, the full roadmap. I'd rather walk you through it in person than try to fit it all into a README.
+
 I'm looking for someone who has deep experience in **full-stack development**, **backend systems**, or **compiler infrastructure** - and who genuinely cares about clean architecture and scalability. Not someone chasing AI hype.
 
-If this resonates, I'd love to hop on a quick call, run a live demo of the engine, and walk you through the codebase. Serious inquiries only.
+If you're serious about this and willing to bet on a crazy idea that could change how software gets built - let's talk.
 
 ## Visual Mockups
 
