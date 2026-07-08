@@ -1,277 +1,146 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/License-MIT-0080ff.svg?style=flat-square" alt="MIT License">
-<img src="https://img.shields.io/badge/Status-Early%20Concept-orange.svg?style=flat-square" alt="Early Concept">
+<img src="https://img.shields.io/badge/Status-Prototype-orange.svg?style=flat-square" alt="Prototype">
 <img src="https://img.shields.io/badge/Platform-Electron-47848F.svg?style=flat-square&logo=electron" alt="Electron">
-<img src="https://img.shields.io/badge/PRs-Welcome-00d084.svg?style=flat-square" alt="PRs Welcome">
 
 # StateForward
 
 **Architecture-first development environment where system design becomes executable code.**
 
-[Vision](#the-vision) · [How It Works](#how-it-works) · [Philosophy](#philosophy) · [Current State](#current-state--roadmap)
+[Vision](#the-vision) · [The Layout](#the-layout) · [How It Works](#how-it-works) · [The Engine](#the-engine) · [Current State](#current-state)
 
 ---
 
 </div>
 
-## The Problem
+## The Problem: Why AI Coding Tools Fail
 
-<table>
-<tr>
-<td width="50%">
+Every AI-driven developer tool today (Cursor, Copilot, Devin) relies on raw natural language prompting. But natural language is inherently ambiguous. "Build a secure login system" can mean a hundred different things. The result is a frustrating, repetitive loop: *prompt, generate, hallucinate, debug, and repeat*. It does not scale for complex, production-grade systems.
 
-We already design systems before we build them.
+At the same time, we already design systems at a high level before we build them. We draw **C4 diagrams**, define **services**, **APIs**, **databases**, **queues**, and how data flows between them. But once design ends, we open a code editor and **manually recreate** that architecture through thousands of lines of boilerplate code. The diagrams are thrown away and become outdated immediately.
 
-We draw **C4 diagrams**. We define **services**, **APIs**, **databases**, **events**, and how everything connects. We present these in design reviews, store them in wikis, reference them during onboarding.
-
-</td>
-<td width="50%">
-
-### Then we throw them away.
-
-Once design ends, we open a code editor and **manually recreate** the same architecture through thousands of lines of implementation.
-
-The diagram becomes outdated the moment development begins.
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-### This feels backwards.
-
-**Why manually translate architecture into code when the architecture already describes what we want?**
-
-</div>
-
-<br/>
-
-## The Vision
-
-<div align="center">
-
-### The Next Level of Abstraction
-
-Programming has always moved one level higher.
-
-**Binary** → **Assembly** → **High-Level Languages** → **Architecture?**
-
-</div>
-
-We started with binary. Then assembly. Then high-level languages. Every step removed a layer of manual work and let us focus more on solving problems than telling the computer exactly what to do.
-
-**I believe the next step is moving beyond writing most of the code ourselves.**
-
-Not because code disappears—code is still what runs everything. But writing thousands of lines of implementation shouldn't be where developers spend most of their time.
+**Why manually translate architecture into code when the architecture itself could describe what we want?**
 
 ---
 
-### Architecture as Source of Truth
+## The Vision: Architecture as the Source of Truth
 
-<table>
-<tr>
-<td width="60%">
+StateForward shifts the focus of software engineering from writing lines of code and repetitive prompting to designing system architecture. 
 
-StateForward explores a different approach: **the architecture model becomes the project itself.**
+In this paradigm, **the architecture model is the source of truth**, and the code is simply a rendering of it. 
 
-The development environment is built around a C4-inspired, multi-layer architecture model influenced by tools like [IcePanel](https://icepanel.io). Systems, containers, components, APIs, databases, queues, and their relationships aren't just visual diagrams—they directly describe how the application works.
+* **Natural language** handles the *why* (goals and constraints).
+* **The architecture** handles the *what* (systems, containers, components, contracts).
+* **The compilation engine** handles the *how* (generating precise, readable code).
 
-**The visual model isn't documentation. It's the project itself.**
+This separation of concerns delivers deterministic, hallucination-free production code.
 
-</td>
-<td width="40%">
-
-```
-┌──────────────────────────┐
-│                          │
-│  Developer designs       │
-│  architecture            │
-│         ↓                │
-│  AI generates            │
-│  production code         │
-│         ↓                │
-│  Code remains readable,  │
-│  editable, portable      │
-│                          │
-└──────────────────────────┘
-```
-
-</td>
-</tr>
-</table>
-
-AI doesn't decide the architecture. **That's still the developer's job.**
-
-The developer designs the system. AI turns that design into production code using existing frameworks, libraries, and proven patterns. The generated code stays readable, editable, and completely portable. If you want to work directly in code, you can. The visual model and the code are simply two representations of the same system.
-
-> **This isn't no-code. This is architecture-as-code.**
-
-You still control the system design. You still decide the architecture. You still write custom logic when needed. But you spend less time writing implementation and more time designing systems.
+> **This isn't no-code. This is architecture-as-code.**  
+> You retain complete control over the system design and can write custom logic when needed. But you spend less time writing implementation and more time designing robust, scalable systems.
 
 ---
 
-### The Direction Forward
+## The Layout
 
-<div align="center">
+The IDE is designed around three permanent zones that are always visible:
 
-I don't think the future is no-code.
+1. **The Frontend Tab (Visual Canvas + Component Tree + Inline Editing)**
+   * Think Claude Code meets Onlook. You build UI components visually, and the code mirrors it in real time. 
+2. **The Backend Tab (C4-Style Layered Architecture)**
+   * A node-based canvas mapping systems, containers, components, and connections. You visually define services, databases, queues, and API routes.
+3. **The Chat Tab (Docked Reasoning Layer)**
+   * Not a standard chatbot, but an active reasoning partner. It explains tradeoffs, challenges questionable design choices, answers what-if questions, and recalculates the structural impact of every change you make.
 
-**I think the future is where developers spend less time writing implementation and more time designing systems.**
+### Why Separate Tabs?
+Frontend and backend have fundamentally different abstraction models. Frontend focuses on visual hierarchy, state, components, and styling. Backend focuses on layers, services, data flow, and deployment. The C4 model maps perfectly to backend design, while frontend needs a layout-driven paradigm. The connection between them—routes, API contracts, and data shapes—is validated continuously by the AI engine.
 
-</div>
-
-StateForward is an exploration of that future—where architecture diagrams aren't just documentation, but the primary interface for building software. Where the complexity of implementation is handled by AI trained on proven patterns, and developers focus on what matters: designing robust, scalable systems.
-
-<br/>
+---
 
 ## How It Works
 
-StateForward is built around a **multi-layer C4 architecture canvas** inspired by [IcePanel](https://icepanel.io). But unlike IcePanel, which creates diagrams for documentation, StateForward generates and stays synchronized with actual, runnable code.
-
-### The Four-Layer Canvas
-
-| Layer | What You Design | Maps To |
-|-------|----------------|---------|
-| **System** | Your entire product: services, databases, external APIs | Top-level architecture |
-| **Container** | Inside a service: apps, queues, caches, infrastructure | Deployment units |
-| **Component** | Inside a container: route handlers, controllers, business logic | Real code modules |
-| **Code** | Inside a component: the actual functions and classes | Live Monaco editor |
-
-**Navigation:**
-- **Click** any node → drill down to the next level
-- **Back button** → zoom out to the parent level
-- You're always navigating the same canvas, just at different granularities
-
-### Visual Features (Planned)
-
 ```mermaid
-graph LR
-    A[Frontend Components] -->|Data Binding| B[API Routes]
-    B -->|Query| C[Database]
-    B -->|Event| D[Message Queue]
-    D -->|Process| E[Background Workers]
-    
-    style A fill:#667eea
-    style B fill:#48bb78
-    style C fill:#ed8936
-    style D fill:#f56565
-    style E fill:#9f7aea
+graph TD
+    A[Step 1: Idea Input] --> B[Step 2: Architecture Selection]
+    B --> C[Step 3: Backend Deep Dive]
+    C --> D[Step 4: Frontend Build]
+    D --> E[Step 5: Code Generation]
+    E --> F[Step 6: Iterative Refinement]
 ```
 
-- **Animated data-flow arrows** showing request/response paths
-- **Color-coded node types:** frontend • API • database • auth • external services
-- **Grouped zones** with collapsible boundaries (e.g., "Backend Cluster", "Frontend App")
-- **Node status indicators:** live • draft • error • disconnected
-- **Pan, zoom, minimap** for large system architectures
-- **Click any Component-level node** → opens the corresponding file in Monaco editor
+### Step 1 — Idea Input
+You describe the system in natural language (e.g., *"Build a train booking system. Users search trains, book seats, pay online."*). 
+The AI evaluates the request, highlights unrealistic constraints (e.g., real-time seat locking at 10K req/s with a basic monolith), and presents 2-3 battle-tested architecture options with their tradeoffs.
 
-<br/>
+### Step 2 — Architecture Selection
+You select the architecture option that fits your constraints. The backend tab automatically populates with a **C4 Level 1 diagram** showing top-level systems, actors (users/admins), and external dependencies (payment gateways, SMS notification systems).
 
-## Core Features
+### Step 3 — Backend Deep Dive
+You zoom into **Level 2 (Containers)** to configure database schemas, API servers, cache layers, and queues. You can drill down to **Level 3 (Components)** to structure controllers, repositories, and middleware. Every time you rename services or draw new connections, data flows and API contracts update automatically.
 
-<table>
-<tr>
-<td width="33%" valign="top">
+### Step 4 — Frontend Build
+Switch to the frontend tab. Based on your backend API endpoints, the system auto-generates a starting component tree (pages, layouts, hooks). Using a binding panel, you can connect any frontend component directly to a backend API route. The client code is auto-generated to match the backend contract exactly.
 
-### Visual Builder
+### Step 5 — Code Generation
+Hit generate. The compilation engine walks the C4 graph. It translates app nodes to modular services with routes and middleware, store nodes to schemas and migrations, and connection edges to API clients or event subscriptions. 
+The output is a complete, runnable project: source code, tests, docker-compose files, environment configurations, and CI pipelines.
 
-**Frontend:** Webflow-style drag-and-drop page builder  
-**Backend:** Node-based canvas where every node is real code
+### Step 6 — Iteration
+Modify the architecture canvas at any time. The engine recalculates the changes and regenerates only the affected code blocks. A visual diff highlights what changed in the architecture, while a code diff shows the generated delta.
 
-</td>
-<td width="33%" valign="top">
+---
 
-### Two-Way Sync
+## The Engine (Compiler Pipeline)
 
-**Change the canvas** → code updates  
-**Change the code** → canvas updates  
+The code generation system is not a simple LLM wrapper that writes code from scratch. It is a structured compiler pipeline:
 
-Neither is the source of truth. Both are synchronized views.
+```
+┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐
+│      C4 Graph &        │ ───> │ Architecture           │ ───> │ Template Resolver      │
+│     Visual Canvas      │      │ Interpreter            │      │ (Maps to Boilerplates) │
+└────────────────────────┘      └────────────────────────┘      └────────────────────────┘
+                                                                            │
+                                                                            ▼
+┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐
+│ Runnable Production    │ <─── │ Constrained AI         │ <─── │ Code Generator         │
+│ Code Output            │      │ Reasoning Layer        │      │ (Assembles Files)      │
+└────────────────────────┘      └────────────────────────┘      └────────────────────────┘
+```
 
-</td>
-<td width="33%" valign="top">
+1. **Architecture Interpreter:** Reads the visual C4 graph and validates structural consistency, checking API paths, database queries, and service connections.
+2. **Template Resolver:** Matches node types to production-ready, battle-tested code templates for the target stack.
+3. **Code Generator:** Produces standard files, setup wiring, and project directory structures.
+4. **Constrained AI Reasoning Layer:** Sits on top of the templates to fill in custom business logic and refine implementation, minimizing hallucinations by operating within strict architectural boundaries.
 
-### Direct Bindings
+---
 
-Wire UI components directly to backend nodes.  
+## How Is This Different?
 
-No implicit mental mapping between frontend and backend logic.
+| Tool | Purpose | Output | Abstraction Level |
+| :--- | :--- | :--- | :--- |
+| **IcePanel** | C4 architecture diagrams for documentation | Static diagrams in wikis | Documentation |
+| **Webflow** | Visual website builder | HTML/CSS/JS (frontend only) | UI Layout |
+| **Retool** | Internal tool builder | Hosted, locked-in dashboards | Low-Code UI |
+| **GitHub Copilot** | AI code completion | Inline code suggestions | Code Editor |
+| **StateForward** | Architecture as executable source code | **Full-stack code generated from C4 models** | System Architecture |
 
-</td>
-</tr>
-</table>
+---
 
-### Frontend ↔ Backend Connection System
+## Current State
 
-Frontend components and backend nodes connect through an **explicit tagging and binding system**.
+### Core Compiler Engine Prototype
+The core compiler engine (StateForward) has been built and validates the compiler pipeline. It successfully demonstrates reading structured system specifications, resolving templates, and producing clean code.
 
-- Tag a button in the frontend builder
-- Bind it to an API route node in the backend canvas
-- The connection is inspectable, traceable, and reflected in generated code
+* **What is built:**
+  * **Core Compiler Engine:** Working compiler skeleton that interprets architectural nodes and handles structural code generation.
+  * **Visual Design Mockups:** Detailed layouts for the frontend canvas, C4 backend canvas, and code editor synchronization.
+* **What is in active development:**
+  * **Interactive Canvas:** Direct React Flow integration for editing nodes visually.
+  * **Two-Way Sync:** Bi-directional syncing mapping visual changes directly to AST and code changes.
+  * **Desktop Shell:** Electron packaging for local-first filesystem access.
 
-**This replaces the implicit mental model developers normally maintain.**
-
-<br/>
-
-## Philosophy
-
-### No Lock-In
-
-The output is **plain, portable JavaScript**. Standard libraries. Standard patterns. Standard structure.
-
-Remove StateForward from the project, and your codebase stays completely intact. No proprietary runtime, no custom syntax, no vendor lock-in.
-
-### Desktop-Native
-
-Built as an **Electron desktop app**, not a web sandbox.
-
-- Real filesystem access
-- Real codebases
-- Real version control integration
-- Works offline
-
-<br/>
-
-## Current State & Roadmap
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### ⚠️ This is a Prototype
-
-**What exists today:**
-- Static HTML/CSS/JS mockup showing the concept
-- Visual design of what the IDE could look like
-- Clear articulation of the vision
-
-**What's not built yet:**
-- Working canvas or node editor
-- AI code generation engine
-- Two-way synchronization
-- Electron app shell
-
-</td>
-<td width="50%" valign="top">
-
-### 🤝 Looking for Collaborators
-
-This project needs:
-- **Frontend engineers** (React, Electron, visual interfaces)
-- **Backend engineers** (architecture patterns, code generation, AST)
-- **AI/ML engineers** (architecture → code translation)
-- **Designers** (UX/interaction patterns)
-- **Architects** (C4 model validation)
-
-**[Start Contributing →](./CONTRIBUTING.md)**
-
-</td>
-</tr>
-</table>
-
-I built this prototype to communicate the vision, but I don't have the skills to build the real product alone. This is an open invitation for developers, designers, and architects who find this idea compelling to collaborate and make it real.
+> [!IMPORTANT]
+> **Proprietary & Private Codebase**  
+> The core compiler engine implementation and underlying code generation mechanics are highly proprietary. The repository is kept private to protect this intellectual property. Access is restricted and provided on an invitation-only basis for co-founder discussions and technical evaluations.
 
 <details>
 <summary><b>View Visual Mockups</b></summary>
@@ -282,73 +151,48 @@ I built this prototype to communicate the vision, but I don't have the skills to
 
 ### Frontend Builder
 ![Frontend Builder](img/Screenshot%202026-06-11%20195637.png)
-_Webflow-style drag-and-drop interface for visual frontend construction_
+*Webflow-style drag-and-drop interface for visual frontend construction*
 
 ### Backend Node Canvas
 ![Backend Node Canvas](img/nodes.png)
-_Node-based backend architecture canvas with data flow visualization_
+*Node-based backend architecture canvas with data flow visualization*
 
 ### Code Editor
 ![Code Editor](img/codes.png)
-_Integrated Monaco editor with synchronized visual-to-code updates_
+*Integrated Monaco editor with synchronized visual-to-code updates*
 
 ### Database Viewer
 ![Database Viewer](img/Screenshot%202026-06-11%20195659.png)
-_Visual database schema management and query builder_
+*Visual database schema management and query builder*
 
 </details>
 
-<br/>
-
-## How Is This Different?
-
-| Tool | Purpose | Output |
-|------|---------|--------|
-| **IcePanel** | C4 architecture diagrams for **documentation** | Beautiful diagrams that live in wikis |
-| **Webflow** | Visual website builder | HTML/CSS/JS websites (frontend only) |
-| **Retool** | Internal tool builder | Hosted internal dashboards (locked-in) |
-| **GitHub Copilot** | AI code completion | Code suggestions in your editor |
-| **StateForward** | Architecture as executable source code | **Full-stack code generated from C4 models** with real-time sync |
-
-**Key differentiation:** StateForward makes architecture _executable_. You're not drawing documentation—you're building the system itself.
-
-<br/>
+---
 
 ## Target Tech Stack
 
-The real implementation (not yet built) would use:
+The IDE is built to run locally as a native desktop application using:
 
 ```
 Electron + React + Vite
 ├── React Flow (node-based backend canvas)
-├── Monaco Editor (code editing)
-├── Fabric.js or Lexical (frontend visual builder)
-└── LLM Integration (architecture → code generation)
+├── Monaco Editor (integrated code editor)
+├── Fabric.js / Lexical (frontend visual builder)
+└── LLM Core + AST Compilers (architecture → code translation)
 ```
 
-<br/>
+---
 
 ## Learn More
 
-- **[C4 Model](https://c4model.com/)** — The architecture visualization framework StateForward is built on
-- **[IcePanel](https://icepanel.io)** — The tool that inspired the visual approach (but makes diagrams, not code)
-- **[Spec-Driven Development](https://medium.com/@enrico.papalini/the-evolution-of-spec-driven-development-c3b5efebb69a)** — Related philosophy about treating specs as source of truth
-- **[The Future of Coding](https://github.com/rrb-rushikesh/StateForward/blob/main/docs/vision.md)** _(coming soon)_ — Deeper exploration of architecture-first development
-
-<br/>
-
-## License
-
-This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
+* **[C4 Model](https://c4model.com/)** — The architecture visualization framework StateForward is built on.
+* **[IcePanel](https://icepanel.io)** — The tool that inspired our visual backend approach.
+* **[Spec-Driven Development](https://medium.com/@enrico.papalini/the-evolution-of-spec-driven-development-c3b5efebb69a)** — General philosophy about treating specifications as the source of truth.
 
 ---
 
 <div align="center">
 
 **Built with the belief that the future of coding is designing systems, not writing implementation.**
-
-⭐ **Star this repo** if you find the vision compelling • 🔗 **Share it** with architects and developers who might be interested
-
-[Report Bug](https://github.com/rrb-rushikesh/StateForward/issues) • [Request Feature](https://github.com/rrb-rushikesh/StateForward/issues) • [Discuss Ideas](https://github.com/rrb-rushikesh/StateForward/discussions)
 
 </div>
