@@ -59,7 +59,7 @@ We started with binary. Then assembly. Then high-level languages. Every step rem
 
 **I believe the next step is moving beyond writing most of the code ourselves.**
 
-Not because code disappears code is still what runs everything. But writing thousands of lines of implementation shouldn't be where developers spend most of their time.
+Not because code disappears - code is still what runs everything. But writing thousands of lines of implementation shouldn't be where developers spend most of their time.
 
 ---
 
@@ -71,7 +71,9 @@ Not because code disappears code is still what runs everything. But writing thou
 
 StateForward explores a different approach: **the architecture model becomes the project itself.**
 
-The development environment is built around a C4-inspired, multi-layer architecture model influenced by tools like [IcePanel](https://icepanel.io). Systems, containers, components, APIs, databases, queues, and their relationships aren't just visual diagrams - they directly describe how the application works.
+Every node, every connection, every service you design lives inside the application environment. There is no external diagramming step. No exporting. No copy-pasting specs into a code editor. You design visually, and the system translates your architecture into real, runnable code in real time - right there, inside the same environment.
+
+The development environment is built around a C4-inspired, multi-layer architecture model influenced by tools like [IcePanel](https://icepanel.io). But unlike documentation tools, StateForward doesn't produce diagrams. It produces code.
 
 **The visual model isn't documentation. It's the project itself.**
 
@@ -82,13 +84,13 @@ The development environment is built around a C4-inspired, multi-layer architect
 ┌──────────────────────────┐
 │                          │
 │  Developer designs       │
-│  architecture            │
+│  architecture visually   │
 │         ↓                │
-│  AI generates            │
-│  production code         │
+│  Application translates  │
+│  into code in real time  │
 │         ↓                │
-│  Code remains readable,  │
-│  editable, portable      │
+│  Code is portable,       │
+│  readable, yours         │
 │                          │
 └──────────────────────────┘
 ```
@@ -99,11 +101,25 @@ The development environment is built around a C4-inspired, multi-layer architect
 
 AI doesn't decide the architecture. **That's still the developer's job.**
 
-The developer designs the system. AI turns that design into production code using existing frameworks, libraries, and proven patterns. The generated code stays readable, editable, and completely portable. If you want to work directly in code, you can. The visual model and the code are simply two representations of the same system.
+The developer designs the system. The application translates that design into production code using existing frameworks, libraries, and proven patterns. The generated code stays readable, editable, and completely portable. If you want to work directly in code, you can. The visual model and the code are simply two representations of the same system.
 
 > **This isn't no-code. This is architecture-as-code.**
 
-You still control the system design. You still decide the architecture. You still write custom logic when needed. But you spend less time writing implementation and more time designing systems.
+<table>
+<tr>
+<td>
+
+#### ⚡ A developer tool first. AI second.
+
+StateForward is **not built on AI**. AI is a part of it, not the foundation.
+
+Without AI, this is still a fully capable development environment - visual architecture design, real-time code generation from structured templates, two-way sync, component binding. All of that works on its own.
+
+AI accelerates the process. It fills in business logic, suggests patterns, catches design flaws. But the tool doesn't collapse without it. This is built for developers who want control over their systems - not a magic button that guesses what you meant.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -117,7 +133,7 @@ I don't think the future is no-code.
 
 </div>
 
-StateForward is an exploration of that future where architecture diagrams aren't just documentation, but the primary interface for building software. Where the complexity of implementation is handled by AI trained on proven patterns, and developers focus on what matters: designing robust, scalable systems.
+StateForward is an exploration of that future where architecture diagrams aren't just documentation, but the primary interface for building software. The tool handles the structural heavy lifting. AI handles the refinement. Developers focus on what matters: designing robust, scalable systems.
 
 <br/>
 
