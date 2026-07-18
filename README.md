@@ -22,7 +22,7 @@ You already design systems before you build them. C4 diagrams, service maps, API
 
 **What if the architecture you designed was the code?**
 
-Every AI coding tool today - Cursor, Copilot, Devin - works the same way: *prompt, generate, hallucinate, fix, repeat.* They all rely on natural language, and language is ambiguous. "Build a login system" means a hundred different things.
+Every AI coding tool today works the same way: *prompt, generate, hallucinate, fix, repeat.* They all rely on natural language, and language is ambiguous. "Build a login system" means a hundred different things.
 
 But when you draw an Auth Service connected to a Postgres store with a `POST /auth/login` route - there is **zero ambiguity**.
 
@@ -103,14 +103,6 @@ StateForward operates as a structured compiler, translating visual C4 models int
 1. **Architecture Interpreter:** Reads the visual C4 graph and validates structural consistency (e.g., matching API routes, schema shapes, and service connections).
 2. **Template Resolver:** Maps the architectural nodes to standard, battle-tested code templates.
 3. **Constrained AI Assistant (Optional):** Sits on top of the compilation process to help refine custom business logic. Because it operates within the strict boundaries of the verified C4 schema, hallucinations are eliminated. If the AI is turned off, the engine still outputs the complete boilerplate and architecture structure.
-
-## Looking for a Technical Co-Founder
-
-There's a lot more to this than what is written here - I'd rather walk you through it in person than try to fit it all into a README.
-
-I'm looking for a partner with deep experience in **full-stack development**, **backend systems**, or **compiler infrastructure** who wants to build a platform that actually changes how software is built. If you are serious, understand compilers, and are ready to bet on a crazy idea - let's connect.
-
-📬 **Interested? Let's talk:** [rushikeshbombade07@gmail.com](mailto:rushikeshbombade07@gmail.com)
 
 ## IDE Interface Layout
 
