@@ -6,6 +6,12 @@
 
 Not no-code. Not an AI wrapper. A developer tool.
 
+<div align="center">
+
+[▶ **Try the Live Demo**](https://sfdemo-opal.vercel.app) · [▶ **Watch Walkthrough**](https://sfdemo-opal.vercel.app/demo.mp4)
+
+</div>
+
 ---
 
 </div>
